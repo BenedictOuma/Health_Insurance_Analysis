@@ -1,0 +1,201 @@
+member_id,national_id,full_name,age,gender,income_level,employment_status,region,registration_date,is_subsidized,nhif_migrated
+1,1588435811,Kari Taylor,64,F,High,Unemployed,Western,2024-09-16,True,True
+2,1319907671,Wanda Taylor,33,F,Low,Self-employed,Nairobi,2024-02-03,False,True
+3,1483717570,Kenneth Murphy PhD,73,M,Middle,Employed,Central,2023-08-19,True,True
+4,2710417684,Jennifer Calderon,27,M,Middle,Employed,Eastern,2022-09-02,False,False
+5,1780483433,Kelly Frey,65,M,Low,Unemployed,Rift Valley,2025-01-21,False,False
+6,1744570620,Michael Phillips,73,F,Middle,Employed,Nairobi,2022-05-07,False,False
+7,7784677680,Jonathan Ward,78,M,Low,Employed,Nyanza,2024-02-12,False,True
+8,6152885670,Courtney Poole,23,F,High,Self-employed,Western,2022-11-04,False,False
+9,6518121794,Diane Ayers,19,M,Low,Self-employed,North Eastern,2023-01-05,False,True
+10,8444611909,Alyssa Arias,73,M,Middle,Employed,Western,2023-02-20,True,False
+11,8294760274,Keith George,72,F,High,Employed,Coast,2022-08-01,True,False
+12,3137872559,Andrew Williams,36,F,High,Self-employed,Rift Valley,2024-05-10,True,True
+13,2994156785,Michael Joyce,22,F,Low,Employed,North Eastern,2024-02-11,True,False
+14,9823918103,Amanda Hoffman,35,M,Middle,Self-employed,Eastern,2024-04-05,True,True
+15,9384035466,Jacob Graham,27,M,High,Unemployed,Central,2022-12-19,False,True
+16,6564440148,Adam Strickland,77,F,Low,Employed,Western,2023-01-13,False,True
+17,5176069770,Jessica Hart,24,F,Middle,Employed,Nyanza,2022-11-23,True,True
+18,0333856334,Jamie Morgan,60,F,Low,Employed,North Eastern,2024-06-15,False,True
+19,1831874372,Shelley Phillips,55,M,Low,Self-employed,Nairobi,2023-01-31,True,False
+20,2052038856,Jennifer Smith,31,M,Low,Unemployed,Rift Valley,2024-10-01,False,True
+21,4639853509,Amanda Lara DDS,54,F,Middle,Unemployed,Coast,2025-03-31,False,False
+22,3101578358,Randy Graham,49,F,Low,Employed,North Eastern,2024-10-01,False,False
+23,0223764510,Kimberly Newman,61,M,High,Unemployed,Western,2022-07-31,True,True
+24,5923085474,Melanie Lyons,36,F,High,Unemployed,Nyanza,2024-05-08,False,True
+25,5960948748,Jason Hill MD,33,M,High,Unemployed,Eastern,2023-08-26,False,True
+26,6839493373,Cynthia Small,41,F,Middle,Self-employed,North Eastern,2024-06-23,False,False
+27,1771665934,John Rodriguez,70,F,Middle,Self-employed,Rift Valley,2022-09-21,False,False
+28,1612838256,John Wells,56,M,Low,Self-employed,Nairobi,2023-01-10,False,False
+29,3775728536,Dr. Richard Smith,78,F,Middle,Unemployed,Central,2023-04-17,True,False
+30,3758425860,Darlene Conway,19,M,Middle,Employed,Nyanza,2024-09-01,False,False
+31,1396252467,John Villegas,75,M,High,Employed,Eastern,2024-05-18,True,True
+32,0435394182,Douglas Perkins,58,F,Middle,Self-employed,Nairobi,2025-03-12,False,False
+33,2038106202,Jennifer Anderson,66,M,Low,Self-employed,Nairobi,2024-08-17,True,False
+34,3684434052,Catherine Munoz,63,M,Low,Unemployed,Nairobi,2023-04-26,True,True
+35,5113759459,Margaret Williams,56,F,High,Self-employed,North Eastern,2025-01-26,False,False
+36,9203395099,Brianna Smith,78,M,Low,Employed,Coast,2023-12-21,True,True
+37,9221334381,Thomas Reid,30,M,Middle,Self-employed,Eastern,2025-04-13,False,False
+38,1439627589,Sarah Huang,34,F,Middle,Unemployed,North Eastern,2024-06-19,True,False
+39,5181681470,Kathy Bailey,36,F,Low,Self-employed,Eastern,2022-05-08,True,True
+40,3468039400,Jerry Carey,20,F,Low,Self-employed,Coast,2022-09-10,False,False
+41,0003263713,Anthony Williams,61,F,Middle,Unemployed,Central,2025-03-07,False,False
+42,0363270919,Vicki Hamilton,43,M,Middle,Self-employed,Western,2023-01-30,True,False
+43,3150153035,Elizabeth Williamson,18,F,High,Employed,North Eastern,2025-01-15,False,False
+44,9643619055,Shawn Graham,32,M,High,Employed,Western,2024-09-02,False,False
+45,1527928194,Doris Schaefer,36,F,Low,Unemployed,Western,2024-09-08,True,False
+46,5592342720,Meghan Daniel,76,F,High,Employed,North Eastern,2024-07-13,True,False
+47,9057049968,Gary Tucker,54,M,Middle,Employed,Nyanza,2024-04-02,False,True
+48,8142452456,Catherine Hernandez,54,F,High,Unemployed,Eastern,2022-10-23,False,False
+49,7201530876,Jennifer Romero,20,M,Middle,Employed,Nairobi,2022-11-23,False,False
+50,3105164739,Cody Sims PhD,53,F,Middle,Unemployed,Coast,2024-08-06,False,True
+51,6800380807,Jimmy Bennett,19,M,Low,Unemployed,Central,2023-08-20,False,True
+52,2426870384,Rebecca Bradley,22,M,High,Self-employed,Coast,2023-09-01,True,True
+53,7475229317,Tracy James,28,M,Middle,Employed,Central,2023-09-24,False,False
+54,0438284523,Melissa Payne,20,F,High,Self-employed,Eastern,2023-08-25,True,True
+55,3324582136,Ian Jensen,35,M,High,Self-employed,Central,2022-12-26,False,False
+56,6252956239,Megan Donaldson,72,F,High,Employed,North Eastern,2022-09-19,True,True
+57,0708746768,Vanessa Green,57,M,Low,Employed,Nyanza,2025-03-16,True,False
+58,7300284553,Nicholas Baker,45,F,High,Unemployed,Nyanza,2022-08-18,False,False
+59,0468269902,Anthony Morgan,29,F,Low,Employed,Central,2023-08-30,False,False
+60,7924675564,Sherri Hernandez,25,F,Low,Self-employed,North Eastern,2024-03-14,True,False
+61,9331739547,Lucas Chen,27,M,High,Employed,Coast,2024-03-05,False,True
+62,8263950000,Ronald Lowery,67,F,High,Self-employed,North Eastern,2024-06-21,False,False
+63,5283929546,Richard Reid,39,M,Low,Employed,Western,2023-11-17,True,True
+64,3292889808,Tiffany Santos,49,M,Middle,Unemployed,Rift Valley,2024-09-30,True,True
+65,9488312906,Donna Weber,42,F,High,Employed,North Eastern,2023-09-10,False,True
+66,4993195626,Angela Monroe,43,F,Middle,Self-employed,Eastern,2024-02-28,True,False
+67,2233220953,Shannon Rios,54,F,High,Employed,Eastern,2024-12-08,False,True
+68,8609573370,Christopher Garcia,54,F,Low,Employed,Central,2024-01-21,True,False
+69,1082607275,Sandra Bush,65,F,Low,Employed,Eastern,2024-10-13,True,False
+70,8928524481,Steven Davis,49,M,Middle,Employed,Rift Valley,2023-04-22,True,True
+71,5131844086,Kevin Galloway,41,M,High,Self-employed,Eastern,2025-01-07,True,True
+72,2719219030,Benjamin Schneider,24,M,High,Self-employed,Central,2022-05-15,True,False
+73,8545835306,Stacey Johnson,24,F,High,Employed,Nairobi,2022-05-08,True,False
+74,9080830702,Pamela Cisneros,62,M,Low,Self-employed,Nyanza,2024-05-27,True,False
+75,9726857776,Justin Logan,76,F,Middle,Self-employed,Rift Valley,2025-02-19,False,True
+76,5987192244,Kristina Davis,49,M,Middle,Employed,North Eastern,2022-09-16,True,False
+77,6535950468,Karen Sullivan DDS,46,F,Middle,Employed,Nairobi,2023-07-20,False,True
+78,6945681325,Dana Allen,38,F,Middle,Employed,North Eastern,2023-11-25,True,False
+79,5054755931,Madeline Mora,40,M,High,Unemployed,Coast,2024-04-01,True,False
+80,5668967150,Chelsea Stephens,66,F,Middle,Unemployed,Coast,2022-12-13,True,False
+81,7148706538,Jamie Farrell,47,M,High,Employed,Western,2024-11-05,True,True
+82,0258457528,Mary Garcia,76,M,High,Employed,Nyanza,2024-12-04,True,True
+83,7410346039,Erin Hawkins,55,M,Low,Unemployed,North Eastern,2024-01-02,True,False
+84,8127646693,Jeanette Bailey,26,F,High,Unemployed,Coast,2024-04-21,False,False
+85,8852313270,Sarah Lane,47,F,Low,Self-employed,Nyanza,2023-03-08,True,True
+86,1681977891,Joshua Benitez,56,F,Low,Employed,Central,2022-10-24,False,True
+87,9057019657,Cody Weaver,42,M,Low,Unemployed,North Eastern,2023-11-10,False,True
+88,5140437990,Christopher Fisher,79,M,Low,Self-employed,Western,2023-02-19,True,False
+89,0036103105,James Castro,28,F,Middle,Unemployed,Central,2023-08-17,False,True
+90,0764913308,Jennifer Simpson,62,F,High,Employed,Coast,2022-07-28,False,True
+91,7242320898,Jenny Stanley,42,M,Middle,Employed,Western,2022-11-04,True,False
+92,4231903715,Nicole Evans,23,M,High,Employed,Coast,2024-01-29,True,True
+93,3867823866,Thomas Castro,65,F,High,Employed,Rift Valley,2023-09-27,True,False
+94,5788007895,Rachel Owens,24,M,Middle,Employed,Nyanza,2024-02-11,False,True
+95,9234472484,William Graves,61,F,Middle,Employed,Western,2023-04-19,True,False
+96,4316981627,Derrick Haas,22,M,Low,Employed,Central,2024-11-28,False,True
+97,1591603834,Nicholas Hinton,65,F,Low,Employed,North Eastern,2023-01-25,True,False
+98,0292831472,Lauren Anderson,79,F,High,Unemployed,Rift Valley,2025-03-22,False,True
+99,9240499077,Monica Holden,76,F,High,Self-employed,Nyanza,2022-09-01,False,True
+100,9340581778,Dr. Jessica Huber,30,M,Middle,Unemployed,Coast,2023-05-26,True,False
+101,7677201194,Melissa Crane,44,M,Low,Unemployed,Coast,2023-04-26,False,True
+102,5880568291,Geoffrey Arnold,35,M,Low,Unemployed,Rift Valley,2024-05-24,False,True
+103,7847448117,Deborah Valencia,76,M,Middle,Self-employed,Nyanza,2024-11-19,True,True
+104,6590124999,Jacob Stout,24,M,Low,Unemployed,Nairobi,2022-07-12,False,False
+105,5943458662,Mary Mitchell,22,F,Middle,Self-employed,Rift Valley,2022-12-16,False,True
+106,5642511549,Katelyn Moore,57,M,Low,Unemployed,Central,2022-12-04,True,True
+107,3405554130,Jack Vang,58,F,Middle,Unemployed,Central,2022-06-30,True,True
+108,5740552128,Hector Wilson,65,M,Low,Unemployed,Coast,2022-08-14,True,True
+109,8964525226,Gerald Phillips,37,M,Low,Unemployed,Eastern,2025-03-24,False,True
+110,2927525339,Christopher Valentine,67,F,High,Self-employed,Eastern,2024-08-25,False,False
+111,1819852175,Erica Williamson,42,M,Low,Employed,Rift Valley,2022-07-25,False,False
+112,5592600137,Ashley Davis,36,M,Low,Self-employed,Eastern,2022-10-23,False,False
+113,9350654961,Amanda Wright,62,F,High,Self-employed,Coast,2023-04-28,False,False
+114,0678575835,Daniel Ward,23,M,Low,Self-employed,Nairobi,2025-02-28,False,True
+115,8078929939,Mr. Daniel Jarvis,21,F,High,Unemployed,North Eastern,2023-09-26,False,False
+116,7414909131,Jay Ferguson,66,F,Middle,Unemployed,Coast,2024-08-23,False,True
+117,6978344478,Megan White,32,M,Low,Employed,Nyanza,2022-12-04,True,True
+118,5563351556,Todd Francis,49,M,Middle,Unemployed,Central,2022-12-20,False,False
+119,0596126388,Morgan Hoffman,38,M,Low,Self-employed,North Eastern,2024-09-06,False,False
+120,0912399762,Chelsea Scott,35,M,High,Employed,Western,2024-11-12,True,True
+121,7727118077,Andrew Garcia,69,M,Middle,Unemployed,Rift Valley,2022-07-22,True,True
+122,3575656709,Tara Gross,60,F,High,Employed,Eastern,2022-12-30,True,False
+123,5901169128,Karen Adams,74,M,Low,Self-employed,Rift Valley,2023-07-13,False,True
+124,7479999031,Amber Reid,65,F,Middle,Unemployed,Rift Valley,2023-08-25,True,False
+125,3420518128,Bradley Watson,27,M,High,Employed,Coast,2024-09-09,False,True
+126,6150510603,Christina Delacruz,41,M,Low,Self-employed,Central,2023-12-19,True,False
+127,4806179095,Anthony Chan,25,F,Middle,Unemployed,Rift Valley,2023-03-18,True,False
+128,1850441282,Stephen Duarte,38,M,Low,Self-employed,Coast,2025-01-04,True,False
+129,8271029218,Zachary Murphy,72,M,Middle,Self-employed,North Eastern,2023-01-03,False,False
+130,4453332375,Sonya Ritter,44,F,High,Self-employed,North Eastern,2022-07-25,True,True
+131,4091312439,Patricia Herring,72,M,Middle,Unemployed,Eastern,2024-12-13,True,False
+132,5513872230,Benjamin Jones,33,F,Low,Unemployed,Western,2024-07-22,True,True
+133,3979757983,Thomas Wheeler,58,F,High,Unemployed,Coast,2023-08-12,False,True
+134,6987957017,Mike Mills,68,F,High,Unemployed,North Eastern,2025-03-15,True,True
+135,0749629039,Bobby Rodriguez,43,F,Middle,Self-employed,Rift Valley,2022-07-20,False,False
+136,6558347383,Courtney Smith DDS,46,M,High,Employed,Eastern,2023-07-11,True,False
+137,0556549697,Rachael Carpenter,22,F,Low,Self-employed,Coast,2023-06-25,False,False
+138,6862954800,Laurie Miller,30,F,High,Employed,Coast,2022-06-30,False,False
+139,2783720608,Patricia Petersen,39,M,Low,Employed,Eastern,2022-09-08,False,False
+140,1810296562,Mark Banks,78,F,Middle,Self-employed,Nairobi,2024-08-27,False,False
+141,1450069796,Gary Fitzgerald,33,M,Middle,Employed,Eastern,2024-08-04,False,True
+142,7605317981,Beth Brewer,78,M,High,Employed,Rift Valley,2023-02-03,True,False
+143,7605719955,William Young,26,F,Middle,Employed,Rift Valley,2024-07-28,True,True
+144,5565450617,Jay Murphy,28,M,Middle,Employed,Rift Valley,2022-11-20,False,False
+145,3514316648,Mrs. Caitlin Dunn MD,57,M,Middle,Self-employed,Nairobi,2023-06-06,True,True
+146,1629185702,Shelly Stevens,20,F,High,Unemployed,North Eastern,2025-03-16,True,False
+147,9626974149,Todd Hartman,56,F,Middle,Unemployed,North Eastern,2024-09-30,True,True
+148,1707968350,Sarah Rose,46,F,High,Employed,Coast,2024-02-09,False,False
+149,5038718766,Kimberly Campbell,75,M,High,Employed,Rift Valley,2022-09-12,False,True
+150,1865074944,Thomas Mcclain,30,M,Middle,Self-employed,North Eastern,2022-05-07,True,False
+151,5141424159,Raymond Reid,76,M,Middle,Unemployed,Eastern,2024-07-21,True,True
+152,8896218273,Sierra Johnson,22,F,Low,Self-employed,Nyanza,2025-03-18,True,True
+153,4283131529,Robert Zavala,58,M,High,Self-employed,North Eastern,2023-02-26,True,True
+154,9619957117,Richard Bailey,63,M,Low,Employed,Western,2024-02-21,True,False
+155,9353414954,Jeffrey Green DDS,29,F,Low,Unemployed,Western,2024-09-02,False,True
+156,5846739311,Jose Brown,33,M,Low,Self-employed,Rift Valley,2024-01-22,True,False
+157,3631646727,Mr. Marcus Beltran IV,36,M,Low,Unemployed,Central,2025-03-06,False,True
+158,5858279279,Austin Ibarra,61,F,High,Employed,Nairobi,2023-10-25,True,True
+159,5818448757,John Kelly,37,F,High,Employed,Nairobi,2024-09-12,True,True
+160,8723133043,Sean Perez,34,M,Middle,Employed,Rift Valley,2023-05-15,True,True
+161,6516630303,Gerald Rivera,36,F,High,Self-employed,Nyanza,2023-02-26,True,False
+162,0001855917,Jennifer Adams,28,F,High,Unemployed,Central,2023-08-24,False,True
+163,4148618851,Megan Daniels,69,M,Low,Self-employed,Coast,2025-01-15,False,False
+164,5542100523,Joe Evans,27,M,High,Unemployed,North Eastern,2022-09-23,False,True
+165,9510859297,Gail Jensen,55,M,Middle,Employed,North Eastern,2023-12-23,True,True
+166,3208656958,Brandi Barnett,50,M,Middle,Self-employed,Nairobi,2023-06-07,True,False
+167,7752456691,Carl Hale,53,M,Middle,Unemployed,Eastern,2023-06-17,True,True
+168,5394789780,Amy Ross,62,F,Middle,Unemployed,Eastern,2024-02-24,False,False
+169,4960859700,David Harris,72,F,Low,Employed,Western,2023-02-03,False,True
+170,7686251524,John Alvarado,69,F,Middle,Unemployed,Western,2022-06-24,True,False
+171,3226319004,Michael Powell,69,M,High,Self-employed,Rift Valley,2023-11-18,False,False
+172,3391776679,Katherine Luna,69,M,Low,Self-employed,Nyanza,2024-05-05,True,True
+173,4523521247,Donald Randall,31,F,High,Employed,North Eastern,2024-04-17,True,False
+174,2384484702,Jared Castillo,80,F,Middle,Self-employed,Nyanza,2023-12-29,True,False
+175,4645307428,Matthew Perkins,28,M,High,Unemployed,Coast,2023-09-25,True,True
+176,6799843712,Eileen Mclean,34,M,High,Unemployed,Western,2024-12-23,True,False
+177,3598092029,Regina Barron,65,M,Middle,Self-employed,Central,2022-12-03,True,True
+178,7472330445,Sierra Thompson,67,F,High,Unemployed,Central,2023-05-30,False,True
+179,8441045909,John Chang,23,M,High,Unemployed,Nairobi,2024-04-27,True,True
+180,2193641950,Kevin Baker,49,F,High,Unemployed,Coast,2024-05-17,True,True
+181,6446775299,Kelly Johnson,47,F,Middle,Unemployed,Rift Valley,2022-05-30,True,False
+182,9469149696,Robert Lee,75,F,Middle,Self-employed,Nairobi,2024-04-03,False,False
+183,0605251995,Mrs. Beth Nelson,71,M,High,Unemployed,Nyanza,2024-08-29,True,False
+184,6779990429,Tracy Brewer,28,M,Middle,Employed,North Eastern,2022-12-22,False,True
+185,2004591925,Mrs. Chelsey White,23,M,High,Self-employed,Nyanza,2023-11-05,False,True
+186,0224399104,Candice Smith,69,F,Middle,Employed,Western,2025-04-15,False,True
+187,3415156814,Sheila Perez,46,F,Low,Self-employed,Rift Valley,2023-04-05,True,True
+188,5733623393,Christopher Christensen,74,M,Low,Employed,Western,2022-09-30,False,True
+189,5202691104,Michael Alvarez,61,M,High,Self-employed,Coast,2023-09-02,True,True
+190,7305356541,Brian Baker,54,M,Low,Employed,Coast,2023-05-11,False,False
+191,5989086007,James Raymond,45,M,Low,Self-employed,Rift Valley,2023-04-28,False,False
+192,2862651755,Joann Snyder,48,M,Low,Employed,Nairobi,2024-06-01,False,False
+193,4477661091,Joanna Norris,60,F,High,Employed,North Eastern,2024-11-08,True,False
+194,9205735389,Kenneth Delacruz,49,F,Low,Self-employed,Nyanza,2023-05-21,False,False
+195,9866952522,Jennifer Harper,56,F,Middle,Unemployed,Central,2023-01-03,False,False
+196,6513124508,Kelly Freeman,62,M,Middle,Employed,Coast,2022-12-03,False,True
+197,3035732660,Randy Oliver,56,M,Low,Unemployed,Eastern,2023-09-03,True,False
+198,1368124497,Rebecca Green,65,F,High,Employed,Eastern,2023-01-15,True,True
+199,2568374124,Michelle Huynh,56,M,Low,Employed,Eastern,2023-08-09,False,True
+200,5602129835,Jeffrey Griffin,23,M,Middle,Employed,Rift Valley,2025-02-01,False,False

@@ -1,0 +1,54 @@
+Problem Statement: Evaluating the Effectiveness of SHIF/SHA using SQL Analysis
+
+Objective:
+You are tasked with analyzing the provided SHIF/SHA data to evaluate its performance, impact, and identify opportunities for improvement. 
+Use SQL techniques such as CTEs, Temp Tables, Joins, Unions, Subqueries, and Window Functions where necessary.
+
+Tasks:
+
+1. Enrollment and Demographics:
+- What is the distribution of members by income level and employment status?
+- How many members are subsidized versus non-subsidized across different regions?
+- What is the average age of members by region? (Use CTEs)
+
+2. Contributions and Penalties:
+- Calculate the total contributions received monthly. (Use Temp Tables)
+- Identify members who have penalties greater than 100 KES.
+- Find the top 5 employers contributing the highest total amount.
+
+3. Healthcare Services Utilization:
+- Which types of healthcare services are most utilized?
+- Calculate the average out-of-pocket expenses per service type and region.
+- Find members with the highest total healthcare costs but lowest coverage. (Use Subqueries)
+
+4. Provider Performance:
+- List providers with the highest number of services offered.
+- Find providers accredited within the last 2 years and compare their claim approval rates.
+
+5. Claims Analysis:
+- What is the total claim amount by claim status (Approved, Pending, Rejected)?
+- Identify discrepancies where claim amount does not match the covered amount for services.
+
+6. Surveys and Sentiment Analysis:
+- What is the average satisfaction score by region?
+- Is there a correlation between trust levels and satisfaction scores? (Consider using CASE WHEN for categorization)
+
+7. Legal Risks:
+- How many legal cases are pending?
+- List legal cases by impact level and find the average filing duration from filing date to today.
+
+Advanced Challenges:
+- Create a member healthcare utilization profile (number of services, average costs, satisfaction level) using JOINs across multiple tables.
+- Using UNION, combine high penalty members and low satisfaction members into a 'high-risk' group.
+
+Deliverables:
+- Write SQL queries to answer each question.
+- Where appropriate, use CTEs, Temp Tables, Joins, Subqueries, Unions, and Window Functions to optimize your solutions.
+
+Note:
+Ensure queries are efficient and readable.
+Document assumptions where necessary.
+
+Write a report explaining the findings and analysis from the data.
+Create visuals
+

@@ -1,0 +1,51 @@
+provider_id,provider_name,region,facility_type,level,accreditation_date
+1,"Carter, Harris and May",Coast,Hospital,Level 3,2024-10-23
+2,Miller LLC,Eastern,Dispensary,Level 5,2023-07-07
+3,Thomas LLC,Rift Valley,Hospital,Level 2,2023-11-25
+4,Gray and Sons,Eastern,Dispensary,Level 4,2025-04-10
+5,"Juarez, Hester and Fischer",Nyanza,Clinic,Level 3,2022-12-20
+6,Parsons-Sloan,Nyanza,Hospital,Level 5,2021-08-23
+7,"Owens, Brooks and Ramirez",Coast,Dispensary,Level 2,2025-01-03
+8,Bush LLC,Nyanza,Clinic,Level 2,2024-05-25
+9,Calhoun-Brown,Nairobi,Hospital,Level 4,2023-11-26
+10,Mclaughlin Ltd,Western,Clinic,Level 3,2024-02-10
+11,"Davis, Nguyen and Rice",Rift Valley,Hospital,Level 2,2023-09-06
+12,Hammond LLC,Coast,Dispensary,Level 4,2022-09-27
+13,Scott LLC,Nyanza,Clinic,Level 3,2023-10-22
+14,"Rodriguez, Mcclain and Mejia",Coast,Hospital,Level 5,2022-12-10
+15,"Horton, Chan and Montgomery",Coast,Dispensary,Level 2,2025-03-14
+16,Maynard Ltd,Eastern,Dispensary,Level 4,2021-10-20
+17,"Ryan, Harrington and Griffin",Nairobi,Dispensary,Level 5,2022-12-24
+18,Hill PLC,Western,Hospital,Level 3,2022-07-02
+19,Foster Ltd,Coast,Clinic,Level 4,2023-07-05
+20,Clark-Mejia,Eastern,Dispensary,Level 2,2020-12-30
+21,"Smith, Garcia and Ingram",Nyanza,Dispensary,Level 5,2021-08-20
+22,Howard-Trevino,Eastern,Hospital,Level 2,2020-06-30
+23,Lang-Tucker,Nairobi,Hospital,Level 2,2023-11-03
+24,"Evans, Caldwell and Haney",Western,Dispensary,Level 3,2022-10-26
+25,Smith-Phillips,Western,Clinic,Level 4,2021-07-19
+26,Johnson LLC,Nyanza,Clinic,Level 3,2021-03-16
+27,Brown-Lee,Central,Dispensary,Level 5,2023-04-25
+28,"Cervantes, Cross and Johnson",Western,Clinic,Level 2,2023-04-03
+29,"Holt, Burns and Mack",Rift Valley,Hospital,Level 5,2023-12-31
+30,Smith LLC,Western,Hospital,Level 4,2021-06-28
+31,Huff-Jones,Nyanza,Clinic,Level 3,2021-12-03
+32,Bryan-Cooper,Eastern,Hospital,Level 3,2024-05-30
+33,Patterson-Mora,Coast,Hospital,Level 4,2022-07-01
+34,"Shea, Williams and Rosales",Central,Dispensary,Level 2,2022-08-24
+35,Morris-Ryan,Nairobi,Hospital,Level 5,2023-12-28
+36,Chang-Smith,Eastern,Hospital,Level 3,2021-08-27
+37,Watts and Sons,Nairobi,Dispensary,Level 5,2024-01-04
+38,"Johnson, Gomez and James",Nyanza,Hospital,Level 5,2025-04-06
+39,"Baker, Gross and Shah",Coast,Clinic,Level 3,2023-07-25
+40,"Anderson, Herrera and Wilson",Nairobi,Hospital,Level 2,2021-04-24
+41,"Soto, Estrada and Baker",Central,Dispensary,Level 2,2020-12-11
+42,Carney-Chapman,Nairobi,Dispensary,Level 4,2023-08-07
+43,Burns-Williams,Coast,Clinic,Level 4,2024-09-08
+44,"Williams, Medina and Medina",Eastern,Clinic,Level 3,2020-08-15
+45,Glenn-Abbott,Nairobi,Hospital,Level 4,2020-06-15
+46,Smith Inc,Rift Valley,Hospital,Level 5,2023-02-24
+47,"Taylor, Morgan and Lee",Nyanza,Clinic,Level 2,2021-12-29
+48,"Parker, Sanchez and Rivera",Rift Valley,Dispensary,Level 3,2022-10-05
+49,"Johnson, Lopez and Warren",Nairobi,Clinic,Level 5,2020-05-26
+50,Rodriguez-Delacruz,Central,Clinic,Level 2,2024-10-09

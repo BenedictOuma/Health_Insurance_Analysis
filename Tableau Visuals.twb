@@ -1,0 +1,2864 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0313.2002                               -->
+<workbook original-version='18.1' source-build='2025.1.0 (20251.25.0313.2002)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AnimationOnByDefault />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Contributions+ (Tableau)' inline='true' name='federated.08kkubc1aswll01czuhoy0ghepvx' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau' name='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='C:/Users/HP/Downloads/Tableau.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation type='collection'>
+          <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Contributions' table='[Contributions$]' type='table'>
+            <columns gridOrigin='A1:G501:no:A1:G501:0' header='yes' outcome='6'>
+              <column datatype='integer' name='contribution_id' ordinal='0' />
+              <column datatype='integer' name='member_id' ordinal='1' />
+              <column datatype='real' name='contribution_amount' ordinal='2' />
+              <column datatype='date' name='contribution_date' ordinal='3' />
+              <column datatype='string' name='payment_status' ordinal='4' />
+              <column datatype='string' name='employer_id' ordinal='5' />
+              <column datatype='real' name='penalty_applied' ordinal='6' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Members' table='[Members$]' type='table'>
+            <columns gridOrigin='A1:K201:no:A1:K201:0' header='yes' outcome='6'>
+              <column datatype='integer' name='member_id' ordinal='0' />
+              <column datatype='integer' name='national_id' ordinal='1' />
+              <column datatype='string' name='full_name' ordinal='2' />
+              <column datatype='integer' name='age' ordinal='3' />
+              <column datatype='string' name='gender' ordinal='4' />
+              <column datatype='string' name='income_level' ordinal='5' />
+              <column datatype='string' name='employment_status' ordinal='6' />
+              <column datatype='string' name='region' ordinal='7' />
+              <column datatype='date' name='registration_date' ordinal='8' />
+              <column datatype='boolean' name='is_subsidized' ordinal='9' />
+              <column datatype='boolean' name='nhif_migrated' ordinal='10' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Healthcare_Services' table='[Healthcare_Services$]' type='table'>
+            <columns gridOrigin='A1:H801:no:A1:H801:0' header='yes' outcome='6'>
+              <column datatype='integer' name='service_id' ordinal='0' />
+              <column datatype='integer' name='member_id' ordinal='1' />
+              <column datatype='integer' name='provider_id' ordinal='2' />
+              <column datatype='string' name='service_type' ordinal='3' />
+              <column datatype='date' name='service_date' ordinal='4' />
+              <column datatype='real' name='cost_total' ordinal='5' />
+              <column datatype='real' name='cost_covered' ordinal='6' />
+              <column datatype='real' name='out_of_pocket' ordinal='7' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Claims' table='[Claims$]' type='table'>
+            <columns gridOrigin='A1:G601:no:A1:G601:0' header='yes' outcome='6'>
+              <column datatype='integer' name='claim_id' ordinal='0' />
+              <column datatype='integer' name='provider_id' ordinal='1' />
+              <column datatype='integer' name='service_id' ordinal='2' />
+              <column datatype='real' name='claim_amount' ordinal='3' />
+              <column datatype='date' name='claim_date' ordinal='4' />
+              <column datatype='date' name='payment_date' ordinal='5' />
+              <column datatype='string' name='claim_status' ordinal='6' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Providers' table='[Providers$]' type='table'>
+            <columns gridOrigin='A1:F51:no:A1:F51:0' header='yes' outcome='6'>
+              <column datatype='integer' name='provider_id' ordinal='0' />
+              <column datatype='string' name='provider_name' ordinal='1' />
+              <column datatype='string' name='region' ordinal='2' />
+              <column datatype='string' name='facility_type' ordinal='3' />
+              <column datatype='string' name='level' ordinal='4' />
+              <column datatype='date' name='accreditation_date' ordinal='5' />
+            </columns>
+          </relation>
+          <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Surveys' table='[Surveys$]' type='table'>
+            <columns gridOrigin='A1:G301:no:A1:G301:0' header='yes' outcome='6'>
+              <column datatype='integer' name='survey_id' ordinal='0' />
+              <column datatype='integer' name='member_id' ordinal='1' />
+              <column datatype='date' name='survey_date' ordinal='2' />
+              <column datatype='string' name='awareness_level' ordinal='3' />
+              <column datatype='integer' name='satisfaction_score' ordinal='4' />
+              <column datatype='string' name='trust_level' ordinal='5' />
+              <column datatype='string' name='comments' ordinal='6' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[accreditation_date]' value='[Providers].[accreditation_date]' />
+          <map key='[age]' value='[Members].[age]' />
+          <map key='[awareness_level]' value='[Surveys].[awareness_level]' />
+          <map key='[claim_amount]' value='[Claims].[claim_amount]' />
+          <map key='[claim_date]' value='[Claims].[claim_date]' />
+          <map key='[claim_id]' value='[Claims].[claim_id]' />
+          <map key='[claim_status]' value='[Claims].[claim_status]' />
+          <map key='[comments]' value='[Surveys].[comments]' />
+          <map key='[contribution_amount]' value='[Contributions].[contribution_amount]' />
+          <map key='[contribution_date]' value='[Contributions].[contribution_date]' />
+          <map key='[contribution_id]' value='[Contributions].[contribution_id]' />
+          <map key='[cost_covered]' value='[Healthcare_Services].[cost_covered]' />
+          <map key='[cost_total]' value='[Healthcare_Services].[cost_total]' />
+          <map key='[employer_id]' value='[Contributions].[employer_id]' />
+          <map key='[employment_status]' value='[Members].[employment_status]' />
+          <map key='[facility_type]' value='[Providers].[facility_type]' />
+          <map key='[full_name]' value='[Members].[full_name]' />
+          <map key='[gender]' value='[Members].[gender]' />
+          <map key='[income_level]' value='[Members].[income_level]' />
+          <map key='[is_subsidized]' value='[Members].[is_subsidized]' />
+          <map key='[level]' value='[Providers].[level]' />
+          <map key='[member_id (Healthcare!Services)]' value='[Healthcare_Services].[member_id]' />
+          <map key='[member_id (Members)]' value='[Members].[member_id]' />
+          <map key='[member_id (Surveys)]' value='[Surveys].[member_id]' />
+          <map key='[member_id]' value='[Contributions].[member_id]' />
+          <map key='[national_id]' value='[Members].[national_id]' />
+          <map key='[nhif_migrated]' value='[Members].[nhif_migrated]' />
+          <map key='[out_of_pocket]' value='[Healthcare_Services].[out_of_pocket]' />
+          <map key='[payment_date]' value='[Claims].[payment_date]' />
+          <map key='[payment_status]' value='[Contributions].[payment_status]' />
+          <map key='[penalty_applied]' value='[Contributions].[penalty_applied]' />
+          <map key='[provider_id (Claims)]' value='[Claims].[provider_id]' />
+          <map key='[provider_id (Providers)]' value='[Providers].[provider_id]' />
+          <map key='[provider_id]' value='[Healthcare_Services].[provider_id]' />
+          <map key='[provider_name]' value='[Providers].[provider_name]' />
+          <map key='[region (Providers)]' value='[Providers].[region]' />
+          <map key='[region]' value='[Members].[region]' />
+          <map key='[registration_date]' value='[Members].[registration_date]' />
+          <map key='[satisfaction_score]' value='[Surveys].[satisfaction_score]' />
+          <map key='[service_date]' value='[Healthcare_Services].[service_date]' />
+          <map key='[service_id (Claims)]' value='[Claims].[service_id]' />
+          <map key='[service_id]' value='[Healthcare_Services].[service_id]' />
+          <map key='[service_type]' value='[Healthcare_Services].[service_type]' />
+          <map key='[survey_date]' value='[Surveys].[survey_date]' />
+          <map key='[survey_id]' value='[Surveys].[survey_id]' />
+          <map key='[trust_level]' value='[Surveys].[trust_level]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G501:no:A1:G501:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Members]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:K201:no:A1:K201:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:H801:no:A1:H801:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G601:no:A1:G601:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Providers]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:F51:no:A1:F51:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:G301:no:A1:G301:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contribution_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[contribution_id]</local-name>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias>contribution_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[member_id]</local-name>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias>member_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contribution_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[contribution_amount]</local-name>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias>contribution_amount</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>contribution_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[contribution_date]</local-name>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias>contribution_date</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[payment_status]</local-name>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias>payment_status</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employer_id</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[employer_id]</local-name>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias>employer_id</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>penalty_applied</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[penalty_applied]</local-name>
+            <parent-name>[Contributions]</parent-name>
+            <remote-alias>penalty_applied</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[member_id (Members)]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>member_id</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>national_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[national_id]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>national_id</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>full_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[full_name]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>full_name</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>age</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[age]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>age</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>income_level</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[income_level]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>income_level</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>employment_status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[employment_status]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>employment_status</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>registration_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[registration_date]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>registration_date</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_subsidized</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_subsidized]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>is_subsidized</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>nhif_migrated</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[nhif_migrated]</local-name>
+            <parent-name>[Members]</parent-name>
+            <remote-alias>nhif_migrated</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WINBOOL&quot;</attribute>
+            </attributes>
+            <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>service_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[service_id]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>service_id</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[member_id (Healthcare!Services)]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>member_id</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>provider_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[provider_id]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>provider_id</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>service_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[service_type]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>service_type</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>service_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[service_date]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>service_date</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_total</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost_total]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>cost_total</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>cost_covered</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[cost_covered]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>cost_covered</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>out_of_pocket</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[out_of_pocket]</local-name>
+            <parent-name>[Healthcare_Services]</parent-name>
+            <remote-alias>out_of_pocket</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[claim_id]</local-name>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias>claim_id</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>provider_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[provider_id (Claims)]</local-name>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias>provider_id</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>service_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[service_id (Claims)]</local-name>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias>service_id</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[claim_amount]</local-name>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias>claim_amount</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[claim_date]</local-name>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias>claim_date</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>payment_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[payment_date]</local-name>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias>payment_date</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>claim_status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[claim_status]</local-name>
+            <parent-name>[Claims]</parent-name>
+            <remote-alias>claim_status</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>provider_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[provider_id (Providers)]</local-name>
+            <parent-name>[Providers]</parent-name>
+            <remote-alias>provider_id</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>provider_name</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[provider_name]</local-name>
+            <parent-name>[Providers]</parent-name>
+            <remote-alias>provider_name</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>region</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[region (Providers)]</local-name>
+            <parent-name>[Providers]</parent-name>
+            <remote-alias>region</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>facility_type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[facility_type]</local-name>
+            <parent-name>[Providers]</parent-name>
+            <remote-alias>facility_type</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>level</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[level]</local-name>
+            <parent-name>[Providers]</parent-name>
+            <remote-alias>level</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>accreditation_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[accreditation_date]</local-name>
+            <parent-name>[Providers]</parent-name>
+            <remote-alias>accreditation_date</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>survey_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[survey_id]</local-name>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias>survey_id</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>member_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[member_id (Surveys)]</local-name>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias>member_id</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>survey_date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[survey_date]</local-name>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias>survey_date</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>awareness_level</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[awareness_level]</local-name>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias>awareness_level</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>satisfaction_score</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[satisfaction_score]</local-name>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias>satisfaction_score</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trust_level</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[trust_level]</local-name>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias>trust_level</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>comments</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[comments]</local-name>
+            <parent-name>[Surveys]</parent-name>
+            <remote-alias>comments</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RUS_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Age_Groups' datatype='string' name='[Calculation_2867948543345872896]' role='dimension' type='nominal'>
+        <calculation class='tableau' formula='IF [age] &lt;= 25 THEN &apos;18-25&apos;&#13;&#10;ELSEIF [age] &lt;= 35 THEN &apos;26-35&apos;&#13;&#10;ELSEIF  [age]&lt;= 45 THEN &apos;36-45&apos;&#13;&#10;ELSEIF [age] &lt;= 55 THEN &apos;46-55&apos;&#13;&#10;ELSEIF [age] &lt;= 65 THEN &apos;56-65&apos;&#13;&#10;ELSE &apos;66-80&apos;&#13;&#10;END' />
+      </column>
+      <column caption='NHIFMigrants' datatype='integer' name='[Calculation_2867948543355506689]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='if [nhif_migrated] = True then 1 else 0 end' />
+      </column>
+      <column caption='Claims' datatype='table' name='[__tableau_internal_object_id__].[Claims_87DB481BD4D64563ABA490F8A36C47CD]' role='measure' type='quantitative' />
+      <column caption='Contributions' datatype='table' name='[__tableau_internal_object_id__].[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]' role='measure' type='quantitative' />
+      <column caption='Healthcare_Services' datatype='table' name='[__tableau_internal_object_id__].[Healthcare!Services_98AF327355894753AD96B101640F6592]' role='measure' type='quantitative' />
+      <column caption='Members' datatype='table' name='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' role='measure' type='quantitative' />
+      <column caption='Providers' datatype='table' name='[__tableau_internal_object_id__].[Providers_DE16C88AC6164B4B84BCC9E171588AFB]' role='measure' type='quantitative' />
+      <column caption='Surveys' datatype='table' name='[__tableau_internal_object_id__].[Surveys_2232479DEF504BBA89D88ED29A58AF39]' role='measure' type='quantitative' />
+      <column caption='Accreditation Date' datatype='date' name='[accreditation_date]' role='dimension' type='ordinal' />
+      <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+      <column caption='Awareness Level' datatype='string' name='[awareness_level]' role='dimension' type='nominal' />
+      <column caption='Claim Amount' datatype='real' name='[claim_amount]' role='measure' type='quantitative' />
+      <column caption='Claim Date' datatype='date' name='[claim_date]' role='dimension' type='ordinal' />
+      <column caption='Claim Id' datatype='integer' name='[claim_id]' role='dimension' type='ordinal' />
+      <column caption='Claim Status' datatype='string' name='[claim_status]' role='dimension' type='nominal' />
+      <column caption='Comments' datatype='string' name='[comments]' role='dimension' type='nominal' />
+      <column caption='Contribution Amount' datatype='real' name='[contribution_amount]' role='measure' type='quantitative' />
+      <column caption='Contribution Date' datatype='date' name='[contribution_date]' role='dimension' type='ordinal' />
+      <column caption='Contribution Id' datatype='integer' name='[contribution_id]' role='dimension' type='ordinal' />
+      <column caption='Cost Covered' datatype='real' name='[cost_covered]' role='measure' type='quantitative' />
+      <column caption='Cost Total' datatype='real' name='[cost_total]' role='measure' type='quantitative' />
+      <column caption='Employer Id' datatype='string' name='[employer_id]' role='dimension' type='nominal' />
+      <column caption='Employment Status' datatype='string' name='[employment_status]' role='dimension' type='nominal' />
+      <column caption='Facility Type' datatype='string' name='[facility_type]' role='dimension' type='nominal' />
+      <column caption='Full Name' datatype='string' name='[full_name]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Income Level' datatype='string' name='[income_level]' role='dimension' type='nominal' />
+      <column caption='Is Subsidized' datatype='boolean' name='[is_subsidized]' role='dimension' type='nominal' />
+      <column caption='Level' datatype='string' name='[level]' role='dimension' type='nominal' />
+      <column caption='member id (Healthcare!Services)' datatype='integer' name='[member_id (Healthcare!Services)]' role='dimension' type='ordinal' />
+      <column caption='member id (Members)' datatype='integer' name='[member_id (Members)]' role='dimension' type='ordinal' />
+      <column caption='member id (Surveys)' datatype='integer' name='[member_id (Surveys)]' role='dimension' type='ordinal' />
+      <column caption='Member Id' datatype='integer' name='[member_id]' role='dimension' type='ordinal' />
+      <column caption='National Id' datatype='integer' name='[national_id]' role='dimension' type='ordinal' />
+      <column caption='Nhif Migrated' datatype='boolean' name='[nhif_migrated]' role='dimension' type='nominal' />
+      <column caption='Out Of Pocket' datatype='real' name='[out_of_pocket]' role='measure' type='quantitative' />
+      <column caption='Payment Date' datatype='date' name='[payment_date]' role='dimension' type='ordinal' />
+      <column caption='Payment Status' datatype='string' name='[payment_status]' role='dimension' type='nominal' />
+      <column caption='Penalty Applied' datatype='real' name='[penalty_applied]' role='measure' type='quantitative' />
+      <column caption='provider id (Claims)' datatype='integer' name='[provider_id (Claims)]' role='dimension' type='ordinal' />
+      <column caption='provider id (Providers)' datatype='integer' name='[provider_id (Providers)]' role='dimension' type='ordinal' />
+      <column caption='Provider Id' datatype='integer' name='[provider_id]' role='dimension' type='ordinal' />
+      <column caption='Provider Name' datatype='string' name='[provider_name]' role='dimension' type='nominal' />
+      <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+      <column caption='Registration Date' datatype='date' name='[registration_date]' role='dimension' type='ordinal' />
+      <column caption='Satisfaction Score' datatype='integer' name='[satisfaction_score]' role='measure' type='quantitative' />
+      <column caption='Service Date' datatype='date' name='[service_date]' role='dimension' type='ordinal' />
+      <column caption='service id (Claims)' datatype='integer' name='[service_id (Claims)]' role='dimension' type='ordinal' />
+      <column caption='Service Id' datatype='integer' name='[service_id]' role='dimension' type='ordinal' />
+      <column caption='Service Type' datatype='string' name='[service_type]' role='dimension' type='nominal' />
+      <column caption='Survey Date' datatype='date' name='[survey_date]' role='dimension' type='ordinal' />
+      <column caption='Survey Id' datatype='integer' name='[survey_id]' role='dimension' type='ordinal' />
+      <column caption='Trust Level' datatype='string' name='[trust_level]' role='dimension' type='nominal' />
+      <column-instance column='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2867948543355506689]' derivation='Count' name='[cnt:Calculation_2867948543355506689:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[member_id (Members)]' derivation='Count' name='[cnt:member_id (Members):qk]' pivot='key' type='quantitative' />
+      <column-instance column='[nhif_migrated]' derivation='Count' name='[cnt:nhif_migrated:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2867948543355506689]' derivation='CountD' name='[ctd:Calculation_2867948543355506689:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[Calculation_2867948543355506689]' derivation='Sum' name='[sum:Calculation_2867948543355506689:qk]' pivot='key' type='quantitative' />
+      <column-instance column='[member_id (Members)]' derivation='Sum' name='[sum:member_id (Members):qk]' pivot='key' type='quantitative' />
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='C:/Users/HP/AppData/Local/Temp/TableauTemp/#TableauTemp_192d2yy1vg0ets18vy79o0u5bk8y.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='05/02/2025 05:39:28 PM' username='tableau_internal_user'>
+          <relation type='collection'>
+            <relation name='Contributions_0D53848FFC85494DAEBD8EDFE36B24A7' table='[Extract].[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]' type='table' />
+            <relation name='Members_30916994558E4FF09CE3A2CA7C329A3A' table='[Extract].[Members_30916994558E4FF09CE3A2CA7C329A3A]' type='table' />
+            <relation name='Healthcare!Services_98AF327355894753AD96B101640F6592' table='[Extract].[Healthcare!Services_98AF327355894753AD96B101640F6592]' type='table' />
+            <relation name='Claims_87DB481BD4D64563ABA490F8A36C47CD' table='[Extract].[Claims_87DB481BD4D64563ABA490F8A36C47CD]' type='table' />
+            <relation name='Providers_DE16C88AC6164B4B84BCC9E171588AFB' table='[Extract].[Providers_DE16C88AC6164B4B84BCC9E171588AFB]' type='table' />
+            <relation name='Surveys_2232479DEF504BBA89D88ED29A58AF39' table='[Extract].[Surveys_2232479DEF504BBA89D88ED29A58AF39]' type='table' />
+          </relation>
+          <cols>
+            <map key='[accreditation_date]' value='[Providers_DE16C88AC6164B4B84BCC9E171588AFB].[accreditation_date]' />
+            <map key='[age]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[age]' />
+            <map key='[awareness_level]' value='[Surveys_2232479DEF504BBA89D88ED29A58AF39].[awareness_level]' />
+            <map key='[claim_amount]' value='[Claims_87DB481BD4D64563ABA490F8A36C47CD].[claim_amount]' />
+            <map key='[claim_date]' value='[Claims_87DB481BD4D64563ABA490F8A36C47CD].[claim_date]' />
+            <map key='[claim_id]' value='[Claims_87DB481BD4D64563ABA490F8A36C47CD].[claim_id]' />
+            <map key='[claim_status]' value='[Claims_87DB481BD4D64563ABA490F8A36C47CD].[claim_status]' />
+            <map key='[comments]' value='[Surveys_2232479DEF504BBA89D88ED29A58AF39].[comments]' />
+            <map key='[contribution_amount]' value='[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7].[contribution_amount]' />
+            <map key='[contribution_date]' value='[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7].[contribution_date]' />
+            <map key='[contribution_id]' value='[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7].[contribution_id]' />
+            <map key='[cost_covered]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[cost_covered]' />
+            <map key='[cost_total]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[cost_total]' />
+            <map key='[employer_id]' value='[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7].[employer_id]' />
+            <map key='[employment_status]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[employment_status]' />
+            <map key='[facility_type]' value='[Providers_DE16C88AC6164B4B84BCC9E171588AFB].[facility_type]' />
+            <map key='[full_name]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[full_name]' />
+            <map key='[gender]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[gender]' />
+            <map key='[income_level]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[income_level]' />
+            <map key='[is_subsidized]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[is_subsidized]' />
+            <map key='[level]' value='[Providers_DE16C88AC6164B4B84BCC9E171588AFB].[level]' />
+            <map key='[member_id (Healthcare!Services)]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[member_id]' />
+            <map key='[member_id (Members)]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[member_id]' />
+            <map key='[member_id (Surveys)]' value='[Surveys_2232479DEF504BBA89D88ED29A58AF39].[member_id]' />
+            <map key='[member_id]' value='[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7].[member_id]' />
+            <map key='[national_id]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[national_id]' />
+            <map key='[nhif_migrated]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[nhif_migrated]' />
+            <map key='[out_of_pocket]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[out_of_pocket]' />
+            <map key='[payment_date]' value='[Claims_87DB481BD4D64563ABA490F8A36C47CD].[payment_date]' />
+            <map key='[payment_status]' value='[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7].[payment_status]' />
+            <map key='[penalty_applied]' value='[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7].[penalty_applied]' />
+            <map key='[provider_id (Claims)]' value='[Claims_87DB481BD4D64563ABA490F8A36C47CD].[provider_id]' />
+            <map key='[provider_id (Providers)]' value='[Providers_DE16C88AC6164B4B84BCC9E171588AFB].[provider_id]' />
+            <map key='[provider_id]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[provider_id]' />
+            <map key='[provider_name]' value='[Providers_DE16C88AC6164B4B84BCC9E171588AFB].[provider_name]' />
+            <map key='[region (Providers)]' value='[Providers_DE16C88AC6164B4B84BCC9E171588AFB].[region]' />
+            <map key='[region]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[region]' />
+            <map key='[registration_date]' value='[Members_30916994558E4FF09CE3A2CA7C329A3A].[registration_date]' />
+            <map key='[satisfaction_score]' value='[Surveys_2232479DEF504BBA89D88ED29A58AF39].[satisfaction_score]' />
+            <map key='[service_date]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[service_date]' />
+            <map key='[service_id (Claims)]' value='[Claims_87DB481BD4D64563ABA490F8A36C47CD].[service_id]' />
+            <map key='[service_id]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[service_id]' />
+            <map key='[service_type]' value='[Healthcare!Services_98AF327355894753AD96B101640F6592].[service_type]' />
+            <map key='[survey_date]' value='[Surveys_2232479DEF504BBA89D88ED29A58AF39].[survey_date]' />
+            <map key='[survey_id]' value='[Surveys_2232479DEF504BBA89D88ED29A58AF39].[survey_id]' />
+            <map key='[trust_level]' value='[Surveys_2232479DEF504BBA89D88ED29A58AF39].[trust_level]' />
+          </cols>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>contribution_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[contribution_id]</local-name>
+              <parent-name>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</parent-name>
+              <remote-alias>contribution_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>Contributions</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>500</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[member_id]</local-name>
+              <parent-name>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</parent-name>
+              <remote-alias>member_id</remote-alias>
+              <ordinal>1</ordinal>
+              <family>Contributions</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>183</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contribution_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[contribution_amount]</local-name>
+              <parent-name>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</parent-name>
+              <remote-alias>contribution_amount</remote-alias>
+              <ordinal>2</ordinal>
+              <family>Contributions</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>499</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>contribution_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[contribution_date]</local-name>
+              <parent-name>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</parent-name>
+              <remote-alias>contribution_date</remote-alias>
+              <ordinal>3</ordinal>
+              <family>Contributions</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>373</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payment_status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[payment_status]</local-name>
+              <parent-name>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</parent-name>
+              <remote-alias>payment_status</remote-alias>
+              <ordinal>4</ordinal>
+              <family>Contributions</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>employer_id</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[employer_id]</local-name>
+              <parent-name>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</parent-name>
+              <remote-alias>employer_id</remote-alias>
+              <ordinal>5</ordinal>
+              <family>Contributions</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>388</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>penalty_applied</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[penalty_applied]</local-name>
+              <parent-name>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</parent-name>
+              <remote-alias>penalty_applied</remote-alias>
+              <ordinal>6</ordinal>
+              <family>Contributions</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>492</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[member_id (Members)]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>member_id</remote-alias>
+              <ordinal>7</ordinal>
+              <family>Members</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>national_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[national_id]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>national_id</remote-alias>
+              <ordinal>8</ordinal>
+              <family>Members</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>full_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[full_name]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>full_name</remote-alias>
+              <ordinal>9</ordinal>
+              <family>Members</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>200</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>age</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[age]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>age</remote-alias>
+              <ordinal>10</ordinal>
+              <family>Members</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>60</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>gender</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[gender]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>gender</remote-alias>
+              <ordinal>11</ordinal>
+              <family>Members</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>income_level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[income_level]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>income_level</remote-alias>
+              <ordinal>12</ordinal>
+              <family>Members</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>employment_status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[employment_status]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>employment_status</remote-alias>
+              <ordinal>13</ordinal>
+              <family>Members</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>14</ordinal>
+              <family>Members</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>8</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>registration_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[registration_date]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>registration_date</remote-alias>
+              <ordinal>15</ordinal>
+              <family>Members</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>179</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>is_subsidized</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[is_subsidized]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>is_subsidized</remote-alias>
+              <ordinal>16</ordinal>
+              <family>Members</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>nhif_migrated</remote-name>
+              <remote-type>11</remote-type>
+              <local-name>[nhif_migrated]</local-name>
+              <parent-name>[Members_30916994558E4FF09CE3A2CA7C329A3A]</parent-name>
+              <remote-alias>nhif_migrated</remote-alias>
+              <ordinal>17</ordinal>
+              <family>Members</family>
+              <local-type>boolean</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Members_30916994558E4FF09CE3A2CA7C329A3A]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>service_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[service_id]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>service_id</remote-alias>
+              <ordinal>18</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>800</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[member_id (Healthcare!Services)]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>member_id</remote-alias>
+              <ordinal>19</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>196</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>provider_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[provider_id]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>provider_id</remote-alias>
+              <ordinal>20</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>service_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[service_type]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>service_type</remote-alias>
+              <ordinal>21</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>service_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[service_date]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>service_date</remote-alias>
+              <ordinal>22</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>487</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cost_total</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cost_total]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>cost_total</remote-alias>
+              <ordinal>23</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>800</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>cost_covered</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[cost_covered]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>cost_covered</remote-alias>
+              <ordinal>24</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>800</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>out_of_pocket</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[out_of_pocket]</local-name>
+              <parent-name>[Healthcare!Services_98AF327355894753AD96B101640F6592]</parent-name>
+              <remote-alias>out_of_pocket</remote-alias>
+              <ordinal>25</ordinal>
+              <family>Healthcare_Services</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>798</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Healthcare!Services_98AF327355894753AD96B101640F6592]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>claim_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[claim_id]</local-name>
+              <parent-name>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</parent-name>
+              <remote-alias>claim_id</remote-alias>
+              <ordinal>26</ordinal>
+              <family>Claims</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>600</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>provider_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[provider_id (Claims)]</local-name>
+              <parent-name>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</parent-name>
+              <remote-alias>provider_id</remote-alias>
+              <ordinal>27</ordinal>
+              <family>Claims</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>service_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[service_id (Claims)]</local-name>
+              <parent-name>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</parent-name>
+              <remote-alias>service_id</remote-alias>
+              <ordinal>28</ordinal>
+              <family>Claims</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>432</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>claim_amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[claim_amount]</local-name>
+              <parent-name>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</parent-name>
+              <remote-alias>claim_amount</remote-alias>
+              <ordinal>29</ordinal>
+              <family>Claims</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>432</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>claim_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[claim_date]</local-name>
+              <parent-name>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</parent-name>
+              <remote-alias>claim_date</remote-alias>
+              <ordinal>30</ordinal>
+              <family>Claims</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>331</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>payment_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[payment_date]</local-name>
+              <parent-name>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</parent-name>
+              <remote-alias>payment_date</remote-alias>
+              <ordinal>31</ordinal>
+              <family>Claims</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>340</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>claim_status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[claim_status]</local-name>
+              <parent-name>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</parent-name>
+              <remote-alias>claim_status</remote-alias>
+              <ordinal>32</ordinal>
+              <family>Claims</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Claims_87DB481BD4D64563ABA490F8A36C47CD]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>provider_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[provider_id (Providers)]</local-name>
+              <parent-name>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</parent-name>
+              <remote-alias>provider_id</remote-alias>
+              <ordinal>33</ordinal>
+              <family>Providers</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>provider_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[provider_name]</local-name>
+              <parent-name>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</parent-name>
+              <remote-alias>provider_name</remote-alias>
+              <ordinal>34</ordinal>
+              <family>Providers</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>region</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[region (Providers)]</local-name>
+              <parent-name>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</parent-name>
+              <remote-alias>region</remote-alias>
+              <ordinal>35</ordinal>
+              <family>Providers</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>facility_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[facility_type]</local-name>
+              <parent-name>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</parent-name>
+              <remote-alias>facility_type</remote-alias>
+              <ordinal>36</ordinal>
+              <family>Providers</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[level]</local-name>
+              <parent-name>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</parent-name>
+              <remote-alias>level</remote-alias>
+              <ordinal>37</ordinal>
+              <family>Providers</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>accreditation_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[accreditation_date]</local-name>
+              <parent-name>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</parent-name>
+              <remote-alias>accreditation_date</remote-alias>
+              <ordinal>38</ordinal>
+              <family>Providers</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>50</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Providers_DE16C88AC6164B4B84BCC9E171588AFB]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>survey_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[survey_id]</local-name>
+              <parent-name>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</parent-name>
+              <remote-alias>survey_id</remote-alias>
+              <ordinal>39</ordinal>
+              <family>Surveys</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>300</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>member_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[member_id (Surveys)]</local-name>
+              <parent-name>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</parent-name>
+              <remote-alias>member_id</remote-alias>
+              <ordinal>40</ordinal>
+              <family>Surveys</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>154</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>survey_date</remote-name>
+              <remote-type>133</remote-type>
+              <local-name>[survey_date]</local-name>
+              <parent-name>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</parent-name>
+              <remote-alias>survey_date</remote-alias>
+              <ordinal>41</ordinal>
+              <family>Surveys</family>
+              <local-type>date</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>201</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>awareness_level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[awareness_level]</local-name>
+              <parent-name>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</parent-name>
+              <remote-alias>awareness_level</remote-alias>
+              <ordinal>42</ordinal>
+              <family>Surveys</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>satisfaction_score</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[satisfaction_score]</local-name>
+              <parent-name>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</parent-name>
+              <remote-alias>satisfaction_score</remote-alias>
+              <ordinal>43</ordinal>
+              <family>Surveys</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trust_level</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[trust_level]</local-name>
+              <parent-name>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</parent-name>
+              <remote-alias>trust_level</remote-alias>
+              <ordinal>44</ordinal>
+              <family>Surveys</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>comments</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[comments]</local-name>
+              <parent-name>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</parent-name>
+              <remote-alias>comments</remote-alias>
+              <ordinal>45</ordinal>
+              <family>Surveys</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>300</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RUS_S2' />
+              <object-id>[Surveys_2232479DEF504BBA89D88ED29A58AF39]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[:Measure Names]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx].[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx].[cnt:member_id (Members):qk]&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx].[sum:member_id (Members):qk]&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx].[cnt:nhif_migrated:qk]&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx].[cnt:Calculation_2867948543355506689:qk]&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx].[ctd:Calculation_2867948543355506689:qk]&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;[federated.08kkubc1aswll01czuhoy0ghepvx].[sum:Calculation_2867948543355506689:qk]&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='provider_id (Providers)' />
+        <field-sort-custom-order field='provider_name' />
+        <field-sort-custom-order field='region (Providers)' />
+        <field-sort-custom-order field='facility_type' />
+        <field-sort-custom-order field='level' />
+        <field-sort-custom-order field='accreditation_date' />
+      </field-sort-info>
+      <object-graph>
+        <objects>
+          <object caption='Claims' id='Claims_87DB481BD4D64563ABA490F8A36C47CD'>
+            <properties context=''>
+              <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Claims' table='[Claims$]' type='table'>
+                <columns gridOrigin='A1:G601:no:A1:G601:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='claim_id' ordinal='0' />
+                  <column datatype='integer' name='provider_id' ordinal='1' />
+                  <column datatype='integer' name='service_id' ordinal='2' />
+                  <column datatype='real' name='claim_amount' ordinal='3' />
+                  <column datatype='date' name='claim_date' ordinal='4' />
+                  <column datatype='date' name='payment_date' ordinal='5' />
+                  <column datatype='string' name='claim_status' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Claims_87DB481BD4D64563ABA490F8A36C47CD' table='[Extract].[Claims_87DB481BD4D64563ABA490F8A36C47CD]' type='table' />
+            </properties>
+          </object>
+          <object caption='Contributions' id='Contributions_0D53848FFC85494DAEBD8EDFE36B24A7'>
+            <properties context=''>
+              <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Contributions' table='[Contributions$]' type='table'>
+                <columns gridOrigin='A1:G501:no:A1:G501:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='contribution_id' ordinal='0' />
+                  <column datatype='integer' name='member_id' ordinal='1' />
+                  <column datatype='real' name='contribution_amount' ordinal='2' />
+                  <column datatype='date' name='contribution_date' ordinal='3' />
+                  <column datatype='string' name='payment_status' ordinal='4' />
+                  <column datatype='string' name='employer_id' ordinal='5' />
+                  <column datatype='real' name='penalty_applied' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Contributions_0D53848FFC85494DAEBD8EDFE36B24A7' table='[Extract].[Contributions_0D53848FFC85494DAEBD8EDFE36B24A7]' type='table' />
+            </properties>
+          </object>
+          <object caption='Healthcare_Services' id='Healthcare!Services_98AF327355894753AD96B101640F6592'>
+            <properties context=''>
+              <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Healthcare_Services' table='[Healthcare_Services$]' type='table'>
+                <columns gridOrigin='A1:H801:no:A1:H801:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='service_id' ordinal='0' />
+                  <column datatype='integer' name='member_id' ordinal='1' />
+                  <column datatype='integer' name='provider_id' ordinal='2' />
+                  <column datatype='string' name='service_type' ordinal='3' />
+                  <column datatype='date' name='service_date' ordinal='4' />
+                  <column datatype='real' name='cost_total' ordinal='5' />
+                  <column datatype='real' name='cost_covered' ordinal='6' />
+                  <column datatype='real' name='out_of_pocket' ordinal='7' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Healthcare!Services_98AF327355894753AD96B101640F6592' table='[Extract].[Healthcare!Services_98AF327355894753AD96B101640F6592]' type='table' />
+            </properties>
+          </object>
+          <object caption='Members' id='Members_30916994558E4FF09CE3A2CA7C329A3A'>
+            <properties context=''>
+              <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Members' table='[Members$]' type='table'>
+                <columns gridOrigin='A1:K201:no:A1:K201:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='member_id' ordinal='0' />
+                  <column datatype='integer' name='national_id' ordinal='1' />
+                  <column datatype='string' name='full_name' ordinal='2' />
+                  <column datatype='integer' name='age' ordinal='3' />
+                  <column datatype='string' name='gender' ordinal='4' />
+                  <column datatype='string' name='income_level' ordinal='5' />
+                  <column datatype='string' name='employment_status' ordinal='6' />
+                  <column datatype='string' name='region' ordinal='7' />
+                  <column datatype='date' name='registration_date' ordinal='8' />
+                  <column datatype='boolean' name='is_subsidized' ordinal='9' />
+                  <column datatype='boolean' name='nhif_migrated' ordinal='10' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Members_30916994558E4FF09CE3A2CA7C329A3A' table='[Extract].[Members_30916994558E4FF09CE3A2CA7C329A3A]' type='table' />
+            </properties>
+          </object>
+          <object caption='Providers' id='Providers_DE16C88AC6164B4B84BCC9E171588AFB'>
+            <properties context=''>
+              <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Providers' table='[Providers$]' type='table'>
+                <columns gridOrigin='A1:F51:no:A1:F51:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='provider_id' ordinal='0' />
+                  <column datatype='string' name='provider_name' ordinal='1' />
+                  <column datatype='string' name='region' ordinal='2' />
+                  <column datatype='string' name='facility_type' ordinal='3' />
+                  <column datatype='string' name='level' ordinal='4' />
+                  <column datatype='date' name='accreditation_date' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Providers_DE16C88AC6164B4B84BCC9E171588AFB' table='[Extract].[Providers_DE16C88AC6164B4B84BCC9E171588AFB]' type='table' />
+            </properties>
+          </object>
+          <object caption='Surveys' id='Surveys_2232479DEF504BBA89D88ED29A58AF39'>
+            <properties context=''>
+              <relation connection='excel-direct.15xx93q10wqs8o1a17bpp1xc5wke' name='Surveys' table='[Surveys$]' type='table'>
+                <columns gridOrigin='A1:G301:no:A1:G301:0' header='yes' outcome='6'>
+                  <column datatype='integer' name='survey_id' ordinal='0' />
+                  <column datatype='integer' name='member_id' ordinal='1' />
+                  <column datatype='date' name='survey_date' ordinal='2' />
+                  <column datatype='string' name='awareness_level' ordinal='3' />
+                  <column datatype='integer' name='satisfaction_score' ordinal='4' />
+                  <column datatype='string' name='trust_level' ordinal='5' />
+                  <column datatype='string' name='comments' ordinal='6' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Surveys_2232479DEF504BBA89D88ED29A58AF39' table='[Extract].[Surveys_2232479DEF504BBA89D88ED29A58AF39]' type='table' />
+            </properties>
+          </object>
+        </objects>
+        <relationships>
+          <relationship>
+            <expression op='='>
+              <expression op='[service_id]' />
+              <expression op='[service_id (Claims)]' />
+            </expression>
+            <first-end-point object-id='Healthcare!Services_98AF327355894753AD96B101640F6592' />
+            <second-end-point object-id='Claims_87DB481BD4D64563ABA490F8A36C47CD' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[member_id (Members)]' />
+              <expression op='[member_id (Healthcare!Services)]' />
+            </expression>
+            <first-end-point object-id='Members_30916994558E4FF09CE3A2CA7C329A3A' />
+            <second-end-point object-id='Healthcare!Services_98AF327355894753AD96B101640F6592' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[member_id]' />
+              <expression op='[member_id (Members)]' />
+            </expression>
+            <first-end-point object-id='Contributions_0D53848FFC85494DAEBD8EDFE36B24A7' />
+            <second-end-point object-id='Members_30916994558E4FF09CE3A2CA7C329A3A' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[provider_id]' />
+              <expression op='[provider_id (Providers)]' />
+            </expression>
+            <first-end-point object-id='Healthcare!Services_98AF327355894753AD96B101640F6592' />
+            <second-end-point object-id='Providers_DE16C88AC6164B4B84BCC9E171588AFB' />
+          </relationship>
+          <relationship>
+            <expression op='='>
+              <expression op='[member_id (Members)]' />
+              <expression op='[member_id (Surveys)]' />
+            </expression>
+            <first-end-point object-id='Members_30916994558E4FF09CE3A2CA7C329A3A' />
+            <second-end-point object-id='Surveys_2232479DEF504BBA89D88ED29A58AF39' />
+          </relationship>
+        </relationships>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Members by Age Group'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Contributions+ (Tableau)' name='federated.08kkubc1aswll01czuhoy0ghepvx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08kkubc1aswll01czuhoy0ghepvx'>
+            <column caption='Age_Groups' datatype='string' name='[Calculation_2867948543345872896]' role='dimension' type='nominal'>
+              <calculation class='tableau' formula='IF [age] &lt;= 25 THEN &apos;18-25&apos;&#13;&#10;ELSEIF [age] &lt;= 35 THEN &apos;26-35&apos;&#13;&#10;ELSEIF  [age]&lt;= 45 THEN &apos;36-45&apos;&#13;&#10;ELSEIF [age] &lt;= 55 THEN &apos;46-55&apos;&#13;&#10;ELSEIF [age] &lt;= 65 THEN &apos;56-65&apos;&#13;&#10;ELSE &apos;66-80&apos;&#13;&#10;END' />
+            </column>
+            <column caption='Members' datatype='table' name='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]' pivot='key' type='quantitative' />
+            <column caption='Age' datatype='integer' name='[age]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_2867948543345872896]' derivation='None' name='[none:Calculation_2867948543345872896:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:Calculation_2867948543345872896:nk]</rows>
+        <cols>[federated.08kkubc1aswll01czuhoy0ghepvx].[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]</cols>
+      </table>
+      <simple-id uuid='{880A71F0-DAC2-4EF5-BD99-B02A5AA44AF4}' />
+    </worksheet>
+    <worksheet name='Members by Employment Status'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Contributions+ (Tableau)' name='federated.08kkubc1aswll01czuhoy0ghepvx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08kkubc1aswll01czuhoy0ghepvx'>
+            <column caption='Members' datatype='table' name='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]' pivot='key' type='quantitative' />
+            <column caption='Employment Status' datatype='string' name='[employment_status]' role='dimension' type='nominal' />
+            <column-instance column='[employment_status]' derivation='None' name='[none:employment_status:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08kkubc1aswll01czuhoy0ghepvx].[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]</rows>
+        <cols>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:employment_status:nk]</cols>
+      </table>
+      <simple-id uuid='{7E095FAE-737D-46AC-9A0C-8053D593FDE3}' />
+    </worksheet>
+    <worksheet name='Members by Income Level'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Contributions+ (Tableau)' name='federated.08kkubc1aswll01czuhoy0ghepvx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08kkubc1aswll01czuhoy0ghepvx'>
+            <column caption='Members' datatype='table' name='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' role='measure' type='quantitative' />
+            <column-instance column='[__tableau_internal_object_id__].[Members_30916994558E4FF09CE3A2CA7C329A3A]' derivation='Count' name='[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]' pivot='key' type='quantitative' />
+            <column caption='Income Level' datatype='string' name='[income_level]' role='dimension' type='nominal' />
+            <column-instance column='[income_level]' derivation='None' name='[none:income_level:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08kkubc1aswll01czuhoy0ghepvx].[__tableau_internal_object_id__].[cnt:Members_30916994558E4FF09CE3A2CA7C329A3A:qk]</rows>
+        <cols>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:income_level:nk]</cols>
+      </table>
+      <simple-id uuid='{9F86A8FB-B0A8-4433-B3EE-0F48DCC038EA}' />
+    </worksheet>
+    <worksheet name='Sheet 5'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Contributions+ (Tableau)' name='federated.08kkubc1aswll01czuhoy0ghepvx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08kkubc1aswll01czuhoy0ghepvx'>
+            <column caption='NHIFMigrants' datatype='integer' name='[Calculation_2867948543355506689]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='if [nhif_migrated] = True then 1 else 0 end' />
+            </column>
+            <column-instance column='[Calculation_2867948543355506689]' derivation='Count' name='[cnt:Calculation_2867948543355506689:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[registration_date]' derivation='Month' name='[mn:registration_date:ok]' pivot='key' type='ordinal' />
+            <column caption='Nhif Migrated' datatype='boolean' name='[nhif_migrated]' role='dimension' type='nominal' />
+            <column-instance column='[nhif_migrated]' derivation='None' name='[none:nhif_migrated:nk]' pivot='key' type='nominal' />
+            <column caption='Registration Date' datatype='date' name='[registration_date]' role='dimension' type='ordinal' />
+            <column-instance column='[registration_date]' derivation='Year' name='[yr:registration_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:registration_date:ok]'>
+            <groupfilter function='level-members' level='[yr:registration_date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:registration_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.08kkubc1aswll01czuhoy0ghepvx].[none:nhif_migrated:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.08kkubc1aswll01czuhoy0ghepvx].[cnt:Calculation_2867948543355506689:qk]</rows>
+        <cols>[federated.08kkubc1aswll01czuhoy0ghepvx].[mn:registration_date:ok]</cols>
+      </table>
+      <simple-id uuid='{356334C4-26FF-468F-8657-3DB91A684392}' />
+    </worksheet>
+    <worksheet name='Total Contributions by Month'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Contributions+ (Tableau)' name='federated.08kkubc1aswll01czuhoy0ghepvx' />
+          </datasources>
+          <datasource-dependencies datasource='federated.08kkubc1aswll01czuhoy0ghepvx'>
+            <column caption='Contribution Amount' datatype='real' name='[contribution_amount]' role='measure' type='quantitative' />
+            <column caption='Contribution Date' datatype='date' name='[contribution_date]' role='dimension' type='ordinal' />
+            <column caption='Income Level' datatype='string' name='[income_level]' role='dimension' type='nominal' />
+            <column-instance column='[contribution_date]' derivation='Month' name='[mn:contribution_date:ok]' pivot='key' type='ordinal' />
+            <column-instance column='[income_level]' derivation='None' name='[none:income_level:nk]' pivot='key' type='nominal' />
+            <column-instance column='[region]' derivation='None' name='[none:region:nk]' pivot='key' type='nominal' />
+            <column caption='Region' datatype='string' name='[region]' role='dimension' type='nominal' />
+            <column-instance column='[contribution_amount]' derivation='Sum' name='[sum:contribution_amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[contribution_date]' derivation='Year' name='[yr:contribution_date:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.08kkubc1aswll01czuhoy0ghepvx].[none:income_level:nk]'>
+            <groupfilter function='level-members' level='[none:income_level:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.08kkubc1aswll01czuhoy0ghepvx].[none:region:nk]'>
+            <groupfilter function='level-members' level='[none:region:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <filter class='categorical' column='[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:contribution_date:ok]'>
+            <groupfilter function='level-members' level='[yr:contribution_date:ok]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:region:nk]</column>
+            <column>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:income_level:nk]</column>
+            <column>[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:contribution_date:ok]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.08kkubc1aswll01czuhoy0ghepvx].[sum:contribution_amount:qk]</rows>
+        <cols>[federated.08kkubc1aswll01czuhoy0ghepvx].[mn:contribution_date:ok]</cols>
+      </table>
+      <simple-id uuid='{8090A8C5-42F2-4E35-BE18-1DA30944EBC9}' />
+    </worksheet>
+  </worksheets>
+  <windows saved-dpi-scale-factor='1.5' source-height='44'>
+    <window class='worksheet' name='Members by Income Level'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:income_level:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{396DB3F4-83B4-4BF4-AC85-065AA88B249A}' />
+    </window>
+    <window class='worksheet' name='Members by Age Group'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:Calculation_2867948543345872896:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E97926BA-A4D1-4CDC-BE08-897C7D0E499C}' />
+    </window>
+    <window class='worksheet' name='Members by Employment Status'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:employment_status:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{D0A50AD7-3CD2-452D-A783-45596DE5ECB3}' />
+    </window>
+    <window class='worksheet' name='Total Contributions by Month'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:contribution_date:ok]' type='filter' />
+            <card param='[federated.08kkubc1aswll01czuhoy0ghepvx].[none:income_level:nk]' type='filter' />
+            <card param='[federated.08kkubc1aswll01czuhoy0ghepvx].[none:region:nk]' type='filter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:contribution_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{F2AEB5C9-47E3-47B9-BDF0-4A89ABC9B7D7}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 5'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='30'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:registration_date:ok]' type='filter' />
+            <card pane-specification-id='0' param='[federated.08kkubc1aswll01czuhoy0ghepvx].[none:nhif_migrated:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[:Measure Names]</field>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[mn:registration_date:ok]</field>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:Calculation_2867948543355506689:nk]</field>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:member_id (Members):ok]</field>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[none:nhif_migrated:nk]</field>
+            <field>[federated.08kkubc1aswll01czuhoy0ghepvx].[yr:registration_date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{7CD49BAF-6A6B-4220-9A78-B605AF6C0B7D}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Members by Age Group' width='192'>
+      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
+      AAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Members by Employment Status' width='192'>
+      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
+      qrLcpVzEAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Members by Income Level' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAMiElEQVR4nO3da2xb9R3G8eecYzu+JU5zv7ZOmyatm6aUtE0ZbIC4qGUFNsYmwegmDXgx
+      TQxp017s3V7t/aa9mia2MU2DQQfqgFGYoNwpoUmahNRJ2ubS3O/Ozbdz2YuU0ozGoBP7nLj/
+      5/OqkRv7F7Xf+NjH/lkyDMMAkaBkuwcgspMjU1esqio0TcvU1ROlRcYC0HWdAdCmx0MgEhoD
+      IKExABIaAyChZexBsCRJcLlcmbp6orTIWACyLENRlExdPVFa8BCIhGb6HuBSTxeW4jpW4jr2
+      h4LoCl+EL78Y9du3QpLSOSJR5pi+B9he34C6YBk8/gDC4T7suelmJBamkND0dM5HlFEbeAxg
+      4MLFIezYsx/hzmm4FQkuWUZC1+HQDGiaBr7OjjY70wGo0Qhikg9+l4JCjxPDMxEsxJKodShQ
+      5NVjID4Ips1OMvty6PjKAnSHHx6XDMPQMdR/EYGSKuT7PQAATdMYAG16pgP4KgyAsgGfBiWh
+      ZexE2EYYhoHf/Pm03WMIx+1y4teP3Wb3GJbalAEAQPuFCbtHEI7P7bR7BMvxEIiExgBIaAyA
+      hMYASGgMgIS2aZ8FIvG80z6I/rE5S2+TAdCm0RIewXsdQ5beJg+BSGgMgITGAEhoDICExgBI
+      aAyAhMYASGgMgIRmOgDDMBCPxaCqq9sf4vEYVK5EoSxj+kzwYF83ljUFgS1FcMRmMLKQRDwa
+      w+FDTZC5GYuyhOkABi4Po7CoFPFEEuMzC2hqOojz59qwktThUbChvUBcJ2QfVVVtu2079kiZ
+      DsDjz0dD4z60trTAUGTohgEdBhRpdTGuYRimt0IwAPvYuclDsuHIwXQA1aUFaGtvh9NfgGCx
+      G59+2gqn2we3Q4Ekrf4w5n8gFmAXO/4T2sl0ABXBnagIfvF1c3FVGsYhshafBiWhMQASGgMg
+      oTEAEhoDIKExABIaAyChMQASGgMgoTEAEhoDIKExABIaAyChMQASGgMgoTEAEhoDIKExABIa
+      AyChmX5P8MTwAMZnF5BXUIrq4lyEe/qQW1iOrZUlEOtt1ZTNTN8DjE3PobGxETVVpeg9342t
+      dSHMjA1C1bjRgbKH6XuA0oIAOtrbkIALUA3kuZ3wOh2IahpkSBtcjMWI7MLFWF+T05uLhopq
+      tJxtxxavgpmlGJYTSXgUBYqyehBkfjEWA7CLw2Hf5yZm1WIsh6GiO9yD+lADAh4Ffb29qKyp
+      g0PhIwDKHqYDyC8uR35x+dWv60MNaRmIyEp8GpSExgBIaAyAhMYASGgMgITGAEhoDICEljKA
+      cx+eRl9fN37/uz/g0kTEopGIrJPyRNgnrWcBQ8O24A581HEJ2+/Zb9VcRJZIGUBDqB5DCzlo
+      rC+Bo2i7VTMRWSZlAA5DgyeQj5LqWrhy3FbNRGSZlI8BHB4/5i+fx4kTJxAenLRqJiLLpAzA
+      53ZhamIEHq8PSwnNqpmILJMygPc/PINjR+/C8vIiBsdmrJqJyDIpA3jo+w/j/fdbEDc8uO+W
+      kFUzEVkmZQBzUxOIajKMxAoSqm7VTESWuX4AhgHDMPDOux/hwUd/hDv2FOK/LWGLRyPKvHWe
+      BjXw2om/Y2ZhGf/8218gxxZw+BhPgtGN5/oBSDK+/fBxNI/0o/38RQBA+Rbfl/5adHEeCdmN
+      PK8LY8OX4S8sQ543J6MDE6VTyscAr7z8L+SWVKKmpgYB/9oTYYauorOtBf0jExgMdyDh8KG7
+      ox2azo0OlD1SngkuL/Di1H9eR6HfhcN3P4Cmeu/Vy4Yv9aC8ph5zUQPTK0kc2F2E6ORlrKga
+      vAr3AmUr7gW6xmJcxvGfPI6qfA/kNTt+VFwaHIPfN4ORJRnV+TmI6waSug6XLENRVu9YuBco
+      +3Av0DWqt1XizZefhyxJOHj7UezbWXn1226/624kVyIojiRQmqugs60VvkARXArfYkDZI/Uh
+      UFk5zrSHEazdBU368m9zpzeArVeOig40FWRkQKJMSvnr+s0338J9R+7EwsI8egbGrZqJyDIp
+      A7j/wWM49cZpTM4ncE/zLqtmIrLMuodAn7z9b7SER+HJ3QIPgJGJWRTlVlg4GlHmrRtAWVUQ
+      xRPLkBxOVG+vQ/22UivnIrLEugFU1zaguHwb2s9+jHdeOwHV6cdte2usnI0o49YN4O2Tz+Lk
+      e+fRdOAQ7jpyP6oqCq2ci8gS6wZw821HUB36xtWvXU77TpAQZcr1/1cbBkYn5+CQgeCOOrgc
+      PLlFN6Z1Xw791snn0TkwiubD34THpWDfLXciFCyzdjqiDFv35dBPPvVLvH7qFPbefAhup4Lc
+      /C0Wj0aUeese2+R4/WisrcDLL72E555/EZGYfa8SJMqUlAf3b53+AD/48ZM41hzEe219Vs1E
+      ZJmUT+0cOXI3XvjrHyE5cvDI8XutmonIMikDqKjdh6ef3mfVLESWS3kIdOKFf2AprmG85wxO
+      fdJr1UxElln3HqD9gzdw8pVX0ds/AtnQ8eBjT1g5F5El1g3gplvvxW+rdsLp8UORJXj9uVbO
+      RWSJlI8BTr/6IuK5VchzO7D30Lewi68IpRtMygACfg+WAoUo2+KBz+2yaiYiy6QMYE/ztzA0
+      Nntlxcnay4Yu9mBuKYq47sD2Yg/6xuYBQ0bzwZsg2/DufiIzUgawsriA6elpXO5pR9xfha1l
+      X7wcoqKqGtrlYczHDAyMz6L54EGcP9eGqKrDo0jQdfPLdLkUxT6aZt/nQGy6vUC+vABKSnRo
+      8wWILK6suUySFXh8PkxHpq/Z52Lg8z9JkmR+zwv3AtnGjt0819y45TeZOgB/HvJyk9hy6zHs
+      qqtdc9nFvjBiKiArDtSUBnCm5SwUxQW3Q4YsSTAMA7Js7mXUXIxlH7P/ZulgR3opA5gcCON0
+      az/06CJyfvgk6iryr15WF1p7hviW8mBGBiTKpJS5t7R24ruPHMfRw7VoCw9ZNRORZVLeA3zn
+      ew/hueeegewpwCOP8iOS6Maz7j1A58dvY8oowE9/9hSOHtqB3iF+TCrdeNYN4HJ/LyLLcQDA
+      0uwYLo3yUyLpxrPuIdAdRx/An555Fu/qEiRPPp54/H4r5yKyxLoBePPL8fNf/MrKWYgsx30n
+      JDQGQEJjACQ0BkBCYwAkNAZAQmMAJDQGQEJjACQ0BkBCYwAkNAZAQmMAJDTTASxHZtDV2YmJ
+      mQh0NY5wdxfGpua50oSyiukAVuIqdoVC6O8No+ezThRvrcVIfw9UjQlQ9jD92adFRUXoPncW
+      hRVbEZkaRqHfjakcF6KaBhnSlW1y5mLgWhT7qKp9H4W16RZjpfJZWwtKd+5DcZ4H5+dHsRBL
+      Iqpq8CgKFGV1w4uiKKaumwHYx+Gw7/Og7VjKZfqndeTkYGygD7O+fOzcvRvhcDcKK7bBoXAv
+      KGUP0wHsati/5uuGRn6UEmUfPg1KQmMAJDQGQEJjACQ0BkBCYwAkNAZAQmMAJDQGQEJjACQ0
+      BkBCYwAkNAZAQmMAJDQGQEJjACQ0BkBCYwAkNNMBGIaB5eVlGFf+PDc7jWg8mcbRiDLPdACT
+      I4P4+EwbNAAjFz7D2NwS2tvaoenc6EDZw/Sb4kurgpiZWwIAjC9E0dTUgPDS3JXVKNwLlK24
+      F8jMlUgSVN2AahhwyDIUZfWOhXuBsg/3An1NIwMXMDE1Cb3nImprtqKttRUeXwA5Ch9XU/Yw
+      HUBlsBaVwdqrXx86UJKWgYisxF/XJDQGQEJjACQ0BkBCYwAkNAZAQmMAJDQGQEJjACQ0BkBC
+      YwAkNAZAQmMAJDQGQEJjACS0tASgJVbQ1XkOQ6NT4Hu5KJukJYCe7m5U7wxherQfqsYEKHuk
+      JYAV1UDA7YTX6URU09JxlUSWSEsAeS4Fs8txLCdVeEy+EZ7IDmkJoDa0B5ODfajYVguHYv07
+      +4nMSssODNmRg12hhnRcFZGlJCPNS3gMw4Cu69A0bUN7gfqGZ9M5Fn0NsiyhtrLA9Pfrug5Z
+      Nn9QMTaziMWVhOnvNyPtAXxuIwFQdsrGf/OMBUCUDXgmeAPmpycQ1wBdi2JsbA7zc7NrlwPr
+      KvouDdg2H301BrABkalJJHTA0KMYH59FPLYC3TDQ292BjrYWTC8mMTxwAedaz2JqIWb3uHQd
+      9m1CvQFoyRi6uzqQg0UkUYbI/Cw8Th2qtxLbC2YxFUuioLQSjaEqdHWOo7gxaPfI9H8YwAYo
+      TjdCu/fCi1l0dM0BACTZgWQihqi+AsO3uvFYkiRIfJXUpsQANqCgrAI5CiDBi+pqB5xKPryB
+      AhRELmB0MoJAnoLK8jIAOaioLLJ7XLqO/wFJ+Orr5hMU9gAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Sheet 5' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABYlAAAWJQFJUiTw
+      AAAgAElEQVR4nO2dd3xU15n3v3f6qI26hLoACSHU6N0QbGxDXLBxwXEcO9nN+s2m7CafbJLN
+      pjjJ7nrfxHk3m2zibDZO4tjYxgV3ugFTTTFIQqAu1AXqdfq95/1DMTGGESqjfr7/zcy953lm
+      5vzuac95jiKEEEgk0xTdeDsgkYwnUgCSaY0UgGRU+fDoPl7b/jplNZcGuMrO7h2HrnqnovQ8
+      drfm845zRecAJ7t3HORGffgj+97mjbfepamt+6r3NdWD/oknnnjiBvdLJMPmzVdfInfpSt7e
+      9goLli9m71uvcrHVRWpCBLvfeo3TRVXMSEygr9eJUe1k2ytvYAgO4blfP8X5ul4SIoyUlFVw
+      qdNJ4eE9nCypI9Li5d9/+nPi4mIxWYKJCbey/eVttLoMRJrs7D5whA9OFzE3cy4GHbz88jYW
+      L5zP889vY+HiXN599SWK67uwuJplCyAZXexdzbzx2nYCZqRQfXoffYEzabpwlKMH99CsiyPE
+      205zTxenThRy9MBulMAIggODSZubyR2fvo2uumIOF9YzZ2YslkAbdWeP0KiFMidjDvPmpXHq
+      RAGHdrxGdOYKig+9TXV9LfV9JoKcF6locQFgCbSRnbeIxckRXOpxEGQL58y+nYioZCkAyegS
+      Ep3KfZ9ejTUgGDSNorMn0YdEo3hdGIxG7A7HlWvnr1hHlKmbd/aeIMhqxu5wIhQDq9asQdd5
+      kcJLbtJSYhE6E3o0vFp/F0lRFFSvl7+8JCEpmfDQELxq/xsel4OG2ioKGzvR6gppdAeTHB2O
+      3mzFMOa/iGRasWjpcubMX4zbfZjw9GyWtzro1ILIWbaMyzt3UlrXTK4+kKXLc1FUD6098Onb
+      VxOitfHugROsW5lFeEggAbY0Eq1FBITOJS7Myu1rV1BeWs3S5fOZn53CO2+9Q866TaQkBGJy
+      BWIKW4Q1uL96z50Zz54Dx7jvkcdIDjeSX/YuM3IWEhYYiOLvdQAhBJqmoWkaiqL4s2jJFMLR
+      3cqp/POomFi5ahkm3fjUFb8L4CNUVUWv149G0RKJ3xj2GMBl76HofCkaoKluSs6fo6yqFrmu
+      LJlMDHsMYHe48LqcaEBNaTGRSenYLEY/uiaRjD7DbgHCIiIxGfu7OC3t7TTXVXH06Ae4Nd+L
+      FxLJRMMvs0DRYaFY41JR+/pwC4HZH4VKJGPAsFuA+upynB43ZWWVJGdkY2+uITRhJkF6ubQg
+      mTzIWSDJtEY+riXTGikAybRGCkAyrZECkExrpAAk0xopAMm0RgpAMq2RApBMa6QAJNMaKQDJ
+      tEYKQDKtkQKQTGuGLQAhBB3t7VeSEnndDlraOvzklkQyNgxbAM0NNRScK0WlXwyVZcUUl1YO
+      25H+zfRyP6VkbBn2hpiYhBTaOnoB6G1rhKBoAhwtV7JCqKrKUCKtW7vsvPjeef5+00L0Otkz
+      k4wNftkRVl5Rhc4aRG1tNXOysgm29hc7lP0A0WHBdPa6yK9oYWlmvD/ckkhuyLAFUF9dTltH
+      O6VlleQtXY1OUQkJDrtS+YeKTqfwyK05/OaNU+TOjsFikjm7JKPPhNoRJoTgt29+yIyIIDat
+      zhgNtySSq5hQnW1FUXhgXSZ7TlXS0eO48Q0SyQiZUAIAiAgJ4LYls3jxvaIhDaIlkuEw4QQA
+      sGFpGuX17VQ0tI+3K5IpzoQUgMmoZ8u6LLbuPYcqE21JRpEJKQCARRkz0OsUTlxoGG9XJFOY
+      CSsAvU7HI7fmsm1/EU63d7zdkUxRJqwAAJJjQ5mXGs27x8vG2xXJFGVCC0BR4MF189h/pprm
+      jr7xdkcyBZnQAgAICbCwcdlstu2X06IS/zPhBaAocMvCmdRc7qK8Xk6LSvzLhBcAgNlk4DO3
+      ZPPsrgI5LSrxK5NCAADz02IJtBo5Ulg73q5IphCTRgCK0h8t+tr7xfQ53ePtjmSKMGkEAJAQ
+      FcKC9Bm8fbRMDoglfmFSCUBRFO5ZncGRc7U0d8ppUcnImVQCALAFWbhjeTov7C2SR7JKRsyw
+      BaB63dTW1qPRnxGirPg8NQ3NY9I1uWXRTBrberhQ3TzqtiRTm2ELoL21mYaGJjSgp7uHhJnp
+      tNRX4RqDzA4GvY5Hbs1h695zeLzqqNuTTF2GvfE2KjaBlpZOAMIiomioLgNrKGadgqqqQ84K
+      MVQyksKxBZp5P7+atXnJo2ZHMrXxy87zS9UldGFjYfYMFEW5shd4tE+J/OxtOTz5/BGWZyUS
+      aDGNqi3J1GRE5wT39PVSWlaJU1Xw9LRy7nwp3jFMbhUfGcLSzAReP1QyZjYlU4sJlRViOPQ5
+      3Hzrt/v43udWMyMieNTtSaYWk24a9JMEWk1sXjOX5/YUytSKkiEz6QUAsDonic4eJ+cuXh5v
+      VySTjCkhAKNBz2duye7fRK/KaFHJ4JkSAgCYlxpFbHgQ+z68ON6uSCYRU0YAiqLw2fU5vHW0
+      lO4+13i7I5kkTBkBAESHBbIqO5Hth4tlnJBkUEwpAQDcvSqDs2VN1DV3jbcrkknAlBNAgMXI
+      vTfNZevec3LPgOSGTDkBAKzMTqLX4aKgUk6LSgZmSgrAoNfx2IY8/ry7ALdHRotKfHNjAQiB
+      qk6+SpSWEEFKbCh7T1eNtyuSCcyAAnjrhT9y9PAevve9H3D0fP1Y+eQ3ttycxc4T5XT2Osfb
+      FckEZUAB2O097Np9iLWr5nO5vXusfPIb0aGBfGp+Cq8cOC8HxJLrMmA0aHVlCcIUSqDowWmN
+      ISkqZNAFj1U06I2wuzx853/28c0HV5AUYxtvdyQTDJ8twKW6Kn73+2eoqqrk8Hs7OHFhciak
+      CjAb2bIui2d3FaDJVkDyCXwKQGgqMTEzQKgkZK/hrpWZY+mXX1k+LwGvqnKqWB62IbkanwKY
+      kZzGrasWUVt9kdILhZTXXj2nLoSgq7MLAQihcamhjl7HxIzB6c8ql8vLBy7IwzYkVzHgIPjD
+      DwtYs+FONm/eTHpS9FWfNTfUcCb/PCpQU3IOOybOFeSjTtBuxqz4MGbFh7HnVOV4uyKZQAy4
+      KT4uJoRXX9hKiNXI0nV3Mj89/spnMQkptHX0AtBqd7NobgyOlkacXg2LjlHPCjEc7rspgx/8
+      8X0WpccSHRY43u5IJgADCiBn8Uoauo6i0b/pxBdGRcGtCbxCw6hT0Ov7G5aJMAv0caLDg3nk
+      1lx+9fppfvjYGiwmvyTFkExiBuwCvb79DZSQCNJjLFzquvrk9vrqclrb2ygpqyR9diqFZ89g
+      CorEqJvY0RUrshJISwjnud2FclZIMvA6wMn9uzDawti7Zy+r7n6MFZkJgy54oqwDXA+3R+Un
+      fz7EzQtSWTs/ZbzdkYwTQmgDd4EcGszJXMC3Fi4dK5/GBJNRz1fuXcyP/3SImXFhcoFsmuKt
+      2DdwF8jk7eQ/f/k0u3fv5mLj1DqfKyYsiC/esYBfvPoBfQ554MZ0Q22/iPvorwbuArVebqCj
+      2w5AREw84SEBgzcwgbtAHyGE4JWDF2ho7eFrm5egn+DjF4l/EK4e7K//H8xLvjiwAHa89Hsq
+      2r042hpxCBPr7tzCTfNnD8rIZBAAgMer8rMXj5GXFsvGZWnj7Y5klBFCw7XvxygB4ZhWfHXg
+      LlBzawe3bXqQDatySJ+XxfFTZ8bKzzHDaNDzpU2L2XmigrK6tvF2RzKaCIHn/BtovZcwLX0c
+      RVEGbgF6Wut5efs7YLKx4ZbltNl1ZKcnDcrWZGkBPqK0tpVfv3GKH31+LWHB1vF2RzIKqJfP
+      49z9Xaybf48uMArwtQ4gNPbuP0BxUSFeoeB1ddPsMA668k9G0hMjuHXRLH775mm8MrvclEM4
+      OnDu+xHmT/3LlcoPvtYBhKC5qY7LbV1XwhlmJM4kKixo0AYnWwsAoKoav3ztBAnRIdy3JhNF
+      UcbbpesihGDHBxXsPFE+ekZULyBweVQ2rpjLuoWphASYJ+xvMhBCCFz7nkAJTcK06AtXfYfr
+      rwMoCudPHmDnyUpycnNJTYwncho8FfV6HX9350K+/8wB0uIjyEuLHW+XrsHjVXl+7zlqLnXy
+      vc/dRJA/DwYRGmprGZ7CbWgtpRjSb6O9vYPD5+v57oezyZ4ZzW1LZpMca0M3iYQguhtRmwoJ
+      WPudawQ8wBhA0NfdSXFRAQcOHmLFXY+yMmvwRxFNxhbgI6ovdfLzl47x/UfXTKigOYfLw69f
+      P4XRoOfxuxb6LZZJqB7U6qO4C15EuHsxZW3GkLYexRyM2n4R585vI+56hmMlzew9XUWQ1cSn
+      l6eRNzsWg37iTx073/8puuBYTAs+d81nPgVQU5rPe0c+RDGYyJiXQ17OPKxD+MEnswCEEBzM
+      r2b/mWq+/7mbMBnH/3t09Dh46qXjZKZE8eC6eSOueEIIcPXgKX4Lz/nX0dkSMOY9jD5uPore
+      +LHrNJw7/glD+u0Y09bjVTXOV7fwzrEyWjr7WL9oFmvnpxBgNkzI7pFmb8Px8qMEPPQiivna
+      A1R8CuDDw7spruvA/Jc/P3vJGjKSo6936XWZzAIA0ITg92+fwWjozzE0Xn+uEFDX3MX/e/k4
+      G5elsX7RzBH5IoRAa7+Ip+hV1OrD6FNWY8p5AF1oMvgo19uYj/vIL7De9wyKTn+lnIbWHnad
+      qOBs+SUWzZnBrYtnERcZPKGE4DrxO/A6Ma/82nU/9ymAgtNHiU9J58LFS9y0OHvIhie7AACc
+      bi8/+uNB7lw5hxVZiePiQ9HFZv7nzdM8uiGPhekzhl25hKai1p/Ck/8iWk8Txsy7MWRsRGcN
+      G9S9ju1/h2nZlzAkLLrm885eJ4cKajhwtprY8CA2LpvNvJRodLrxFYJw9WLf9gjWe55GF3z9
+      8ZzPPk1J0VlMASG8f7KAZblz0BsM0y5UwGIy8LX7lvGvzx0iKdpGQvTgs2KMFCEEhwtreeXA
+      Bb7+wHJSZ4QOufILIcBjx1u+B3fBNhSLDVPeQ+iTV6DoBz94VnR6TAs+h+fDZ9HHL7zGj9Ag
+      C3etnMOGpbM5U9bEqwcv8GdnIRuWzWbFvETMJv3YtwpC4CnbhT4uDyUoxudlA3SBdnH6Qg0O
+      l4fgQCuL12wgZ3bcoO1PhRbgI04UN7D9/Qs88fm1WM3GG98wQlRN443DJZwsbuSbW5YTFTq0
+      gbgQAtHdiKfoNbwV76GPm48x7yH0kek+uzk3LFNTsb/0MJZbnkAfnXFD+xebOnn3eBlldW0s
+      z0rklkUzibIFjJkQhOrF/tJDWG57En2k7/AdnwJou9xAU0vHldcxCSlEhU7tdQBfCCF4fu85
+      uvtc/P2mRaP6J3q8Kn/YkU9rl52vbV5CcIB5KI6iNhXgLngRrbUMQ8YdGOfe2b/w4wefPRfe
+      RK0/jWX9jwdVnhCCtm4HB85e5HBBLalxYWxclkZ6QvioC8FT8R7e4rex3PGfA9ryKYDa8iKK
+      q/6aRiQ9exGpcRHXLUT1uKgor8AWHU9MRCiKMrUEAOBRVf7tz4dZmZ3ELQtTR+UP7HW4+eWr
+      JwgLtvC3dywYcBvqxxFeJ97Kg3gKXgTAmPsQhplrUYwWv/onPA7sLz2M9a5forMNfnOUEP0L
+      aieLG9jxQTl6nY6Ny9JYnBE3KjNsQmg4XnkM86pvoI/LG/Ban2MAl8tBV2cHLo+K2WTENUCW
+      5QvnCknJzKO44EMiw5Zi0E+cWQB/YdTr+ermpfzojwdJiQ0lLSHcr+W3dPbx1EvHWZwRx703
+      zb3hAFIIgehrwVP8Nt6Sd9BFpmNe9XV0M3JH7emqGK0YM+/GU7AN0+pvDNqOoihYTAZuyk1m
+      dU4SxTWt7PignJcPnGdtXjJr5qcQFmTxm99q/WnQGdHPyL2xb75aAKe9l77mKv5r+0n+4dF7
+      CAgK8dn/ra8q5XJnH25VYcnCvP4VRVVFNwUHzUUXm3n5QDFfuWeRXxbJhBAUVjXzxpEyPpWX
+      xOqcpAErgmZvQ2spg9ojaN0NED4LQ+a96ELi/NLNuaG/jg7cb34J0x2/QgmKuvENvsoRgsvt
+      few7c5Hy+nZuXpDKTbkjjzUTqhfPrn9CP28z+pRVN7zeZwtQVXyWYydO01BVz+uvw+K1G8n1
+      MQhuaW0ndU4WlUWFODVB4F+a7qnUBfqIvLQ49Ho9P33pOD/5m08NrY/+CVRV4/m9hVQ1dfDN
+      LcuxBV6/yyKEhtZWiSf/Rbz1JzHOXo9x4WMowbFjP7sSHIXI3YJ6+ndYbv7BiESXEBPKYxvm
+      43B5+eEfDhBoNbFkbsKIdOytPYqiKJhm3YSi3PgB7LMF6Ovpoqfvr5kggmxhBFmv/2drqofa
+      6hqCI2KJ+MtAeaqNAT7J64eKqWjs4Ov3LxvWqqzd5eHpN05h0Ot4/K5F1w1rEF4Xau0HuAte
+      Qjg6MebchzH9dhTT+IZnCI8T+wsPYL33f9AFz/BLmQ0t3Ty59Qj//NlVxEcOb7pZCIHjtb/F
+      tPRxDIlLBnWPTwFUFJ3ibHE1QnXzwaEDrHvkm9yxfODpr48z1QXgVTV+vu04GUmR3LUyfUhP
+      4o4ex5V7t9ycdY2AhLMbT8k7/SEKwXEYc7egT1g4pLn70cZ18n/B4/C5wjpUhBAcK6rjnePl
+      PPHYGszDiHNSmwpxHfoZ1vv/dGXF+kb4FIDX7eDE4QMUXbzMijXrmDcraUgre1NdAABdfU5+
+      8MxBHr9rIZkpg+sPN7R087OXjrFh6WzWL551JapSCIHorMV97mW8VQcxpNyEKfdBlNCkQTXl
+      Y41mb8Px6hcIuP9ZFGuoX8oUQvDsrgKcbi+P33XtgtuN7nW++w0MczZiTFs/6Pt8/rIH39rK
+      rg8uEGYLoiT/JGV1LYMudLpgC7Tw1c1LePrN07R1Owa8VghBUVUzT249wiO35nDbktnoFAWh
+      evDWnsD5zjdwvPtNdEGxBG7ZimXtt9GFpUzIyg+gs4ajT16Fp/gt/HUos6IoPLw+m8bWHg6c
+      rR5SsVp7JVpnLYZZ64Zm01cLoGnaVbk9FUUnWwAf7D5ZwYniBv754VXXnbsXQnCksJZX3r/A
+      1+5dyuyEcITHjrdsD+7CbSjmEEy5D6JPXoliGP6geqzROmtxvPU1Ah5+5aoI0pHS0tnHj589
+      xDceWEbqjBvHKiEEzv0/QReVgSnngSHZ8rElUlBcUkpFeSmqUNDr9eMe2DSRWb9oFuHBVl45
+      cOGahMCaJnjzSClvHSvle4+sZqbNjevYr7BvfRC18SyWW57Aes/TGGatm1SVH0CxJaKLzsRb
+      ttuv5UbaAvjCxjx+tf0kfc4b52zSei+jNpzBOGfjkG352BKp8d8/+wmFVQ0sXbYai1HH/BU3
+      k5k6+B1S06kFALA7Pfzwjwd5cN08Fs3pny52e1T+tDOf5o4evrY6EGPZdrTmEgwZn8aYeTe6
+      EcyjTxTUllKce39IwIPPo+j9l2xYCMGr7xdTd7mLf7h/6YCBmK6jvwKDGfPSvxuyHZ9dIJej
+      l9179pCzYClmg47g0HCf06DXY7oJAKC+uX8q7/uP3oQt0Mx/vvIBQS0neST6LGaTAWP2Axhm
+      rhn3aUy/IgT2N7+MKfchDKmr/Vq0qmr8xwtHyZsdw8Zl6dddHxBuO31b7yfggWfRBUYO2caA
+      aVGqCo/yxv4PQYMHHvsbEsIH/8dNRAH0hw+0gtc+ajaOFDXwTmEPIMjt2cmmbAuW+Z9BF5ON
+      MgVXxgG8tSdwn/4D1k2/GfT042Dp6nXygz/0z7TNTY68ZmbIfeZ5tJ4GLGu+BQy9mz5gm3Xg
+      4HEefOzL9JzfzdH8Sh5clzNkAxMFITQ8Rdtxn/xfn5sj/MFCoMGylJjEWaxd8i10tvgb3jPZ
+      0ccvhA9+g3b5PPoZ/q0jtiALX7p7Eb958xQ//sKnCA3662q58DjwFL2CddPTDKfyww1agMby
+      fF7Z8T6KwcJDjzxKVMjgowsnUgsghIb7+K9RG85g2fB/0QUNfmunZHB4SnfirTyAdeNP/V72
+      R2lg8isu8e3PrLyycOgp3Ym36n0stz857JCQAQXwyY+GYmSiCEB4HDj3/yt43VjWPzG1+t8T
+      COF1YX9hS3+odKj/t48KIfjFqyeIiwjigU/NA8B1+OcY52xEHzP8E0wH7JS+8vIL9LlUmkqO
+      s/tU2bCNjBeavQ3H2/+IYgnFsuFJWflHEcVgxpj7IO4zfx6d8hWFL96xgNMljZwpvwSuboSz
+      C13U4MNzrofPMcDZo3t4550dVFY3ohOCTY98cUSGxhqtqx7HO9/AmHk3xtwtfh+cSa7FmHk3
+      fVvvR+ttHpVuZpDVxN/fs4SnXjrGjAWNRIQmjXhiYcAuUH3tRfSmAPQ6haCQUAKGkIVsvLpA
+      Qgi0pgKce3+AadXX+3dGTaA0HVMZIQTuE78FITAv+9Ko7E8QQnAov4pdb7/JD750L9aolBGV
+      N6B89r/9Crv3H+Tw4cPUNXeOyNBY4a3Yh3Pfj7Cs/zHGmbLyjyWKomDM2oy3fA/C1TNqNlZY
+      ikkIsLO71Dni8gYUQGiQFVNgKJGRkWOSDWEkCCFw57+A++Tvsd75i/69oLLyjzlKYBT6hMV4
+      SneMSvlC8+LO38pjWzZRWttGc0ffiMobUABLb7mL3NkJREZGEjCBBSBUN65DT+GtOkjA5t+h
+      Cxt8DlOJf1EUBeP8h/EUbkOoXr+Xr9YcR7GGERA/j5tyk/mvV0/g8frer34jBhRATfl5jhw5
+      wlvbX6ZkgNNTNNVDWXER5Rfr/BUZO2iEuw/nru8iXF1Y7/wvFIs88XG80Yclo4uYjbdin1/L
+      FZqKO38rpvmPoCgKyzLjSY618dyewmum7AfLgAJYuGo9n//857lr7Xwud/T6vK66rJjwhNmk
+      Jvpne9xg0fpacbz5ZXThKVhueQLFKE92mRgomBY+hvvscwht+E/nT6I1F4O7D/1f0jMqisJj
+      t+dRVtfGsaK6YZU5YCjE2eP7OXWuAr05iDvvSfF5XXNbG3ZvOUXtXSxftQIDAlVVh63KwaC1
+      VeLZ+1302VvQZ25C1QDN/02uZJiEp4MpEHf1MfRJy/1SpPv0n9Bnb0EVCnj7/2udAl+5ZxH/
+      8cIx4iKCSBxi+soBBWBSNFzCgNbeTI/Tg6/ne2SojeCk2eAswi0E5lHNCiHw1p3Cs//fMK/5
+      JobkVXKwO1FZ8Dnc+S9gSlk54vl6rbMW0VGJKf3fUAxXV9uE6FA+d1suv3nzQ378haGlrxzQ
+      q9Nnz3PvQ49w29JZFJT5bmJmzs2mu/EiwXFJBI3igQlCCDwlO3AdeBLLhv/AkLJaVv4JjD5x
+      KcLZhdZaOuKy3Ge3Ysy+3+emocUZceTOiuGZd8+iDaHnMWBtvff+zbz74jMcrXRy+7K5vgvR
+      G0nLyCQ5PmbU5t2FpuI+/Qzu/Bew3vM0+hEugUtGH0VvxJT70IjDI7TeZtSaYxgzN/m2pSg8
+      dEsWbV129p6qHFT32+NVfQug8Nh7tGhhfOnLX+XWRamU1jYPz3s/ILxOXAefRGsqJGDTX3K9
+      yyf/pMAw+xa05mK0roYbX+wDT9FrGOZsuOEkh16n4yv3LmHHB+VUNLQPeK0Qgm37z/sWQH11
+      BZ32/v2YvW2NVDcNXOBoIVy9ON79JgiBZePPUCxjl6NfMnIUowVj1mbc+S8M637h6sVbtgtj
+      1uZBPfQibAH87R0L+e/tp+h1+N5PfKqkkYLKy74F8KmNd/PBW8/y86eeYu+FLm5bNvZdDq27
+      Efvrj2OIW4B53b9Muk3jkn6MWffgvfg+Wl/rkO/1FL+NPnEpyhCC67JSo1i3IJVfv37qumc+
+      N7b28OyuAv7x/qUDB8ONhJEFwwnUy8U493wP06IvYMz4tOzyTGKEELiP/QqMVsxLBh9VLFQP
+      9hcexPrpn6MLTx2STU0TPLXtGGkJEWxaNefK2NTp9vKjP73PHcvTWJGVNPAgeLzw1hzHufPb
+      mNd+B4Os/JMeRVEwZt+Pt+RdhHvwsTveyv3owmeiC0sZsk2dTuHxuxZxKL+a89X9Sd2EEPx5
+      VwHpCeEsz0pEUW4wCzTWCKHhPvcarkNPYb3rlxgSFstozimCEhyLPn4BnpLBBckJzYv7zHOY
+      Fj027AegLdDMV+5dytNvnKa928GBs9XUNXfx2Vtzr6Sk9F8ilxEiNBX3B79BbTyL9Z7fyn27
+      UwxFUTDmfQbnzu9gzLoHRTdw1VPrT6GYAtFFD3+7I8Cs+DA2rc7g358/jMuj8v1Hb8Jo+Otz
+      f+IIwNGBcHZjvfOXKObBn0UmmTzowmehsyXirXof4+ybfV4nhIb77FZM8x/2S27Umxek0tTW
+      Q86sGKJsV2+LnaCDYMlURW0qwHX451jv+4PPVkBtLsb53k8IeOBZv+YcvR4TagwgmfroYrNB
+      b0JtOOvzGveZ5zDlbhn1yg9SAJIxRlF0mPIexnP2eYS4do5e62pAaz6PIf3WMfFHCkAy5uhT
+      VqL1XkZrq/jEJwJ3/laMWfehGPx7xKsvpAAkY46iN2HKfRDPmeevel/ra0OtPoIx8+4x80UK
+      QDIuGNJvR23KR+tpAv4S6n7+DQyzbgZz8Jj5IQUgGRcUoxXjvHv/GiTnseMteQdjzgNjuvgp
+      BSAZN4zzNqFWvY9mb8dTuhN9XN6oZu6+Hn4TQE97E2eLJl/+UMk4YrFhmLkGT9F2PAUvYZz/
+      2TGP+/KLAITmobKmEY9jZEmKJNMLRVEw5mzB8+Gf0IUmoo+YPeY++CUUor6yjLiZ6dSWVfTn
+      5tS0Uc8KIZkiBEZjyN2CLmU1Xu/YZ/XwSyhEdXkx3Q4nFeXVrN94J8FWgwyFkEwK/BgLpNHV
+      1YvN1r9lUQpAMhmQwXCSaY2cBpVMa6QAJNMaKQDJtEYKQDKtkQKQTGukACTTGikAybRGCkAy
+      rZECkExrpAAk0xopAMm0RgpAMq2RApBMa6QAJNMaKQDJtEYKQDKt8YsAXPYeis8XUVHdIPcB
+      SyYV/hGA28vM9Ll0N9fjUqUAJJMHv2SFCLbZqCm/gC4wArNeQVVVmRVCMinwy94MSxwAAAad
+      SURBVJ7g+vIiHNYY0hKirrwn9wRLJgN+6QIpJgv29iYKi0rwavKpL5k8yKwQkmmNnAaVTGuk
+      ACTTGikAybRGCkAyrZECkExrpAAk0xopAMm0RgpAMq2RApBMa6QAJNMaKQDJtEYKQDKt8YsA
+      vC47RecKqG1qRcaCSiYTfhFAWfEFktIyaa6vQpXh0JJJhF8EYPcKQixGAoxGnJrmjyIlkjHB
+      LwIINulo73Nh93ix6OSwQjJ58MuGGNXjorysDFtMIrGRoSjIDTGSyYHcESaZ1vglK8THEUKg
+      aRqqqvq76GvQNA3dKHe5hBAIIUbdzlh8l7H6vQAURRlVO/76Ln4XgKIoV578Y9ECjLaNsRIA
+      yN9rqPjju4xaF0gimQyM2ZTNpcZGRqtTVFKUT2FhIa1dfR97101lRc0oWfSSf6YADUB4OHU6
+      /4Z39HVcoqm1d5j2NM6fO4dngDWWzvZ2VAGVleXDMyE0zhcW4PQKhFApzP8Ql3eY7t7ATkPT
+      pVEo+BNmhEZjU9NV73VfqqWlx3XVe37vAvniUkMjYVHhlJSU4VXMZM6KoaD4InpFISNrHh3N
+      bURHBHGp04HO3U1zWzcJszJwdbXQ1tZGQHAoqTNTaKytJS4pGf3HuphuDOTkZAFQfqEQu2og
+      M3MmF8tL6OxqY868HDou19LW2UtYRATJCfHUVdcQGWWjrKIGc2AoqVEWqi51Y9AJrLZYooM0
+      WnsFcdFh1/k2Kh2NNVyamUFAbw3Vbd0scDsoKS1D1QeQmRpNdf1lPDorNoOL5vYeYqLDKKms
+      oTE4kLz5WQyl8Xb3tuPo7aL6UjeJwV6KK+oQip7seWnU19TT7YbYECtB4eBwOIb3BwmNzrZm
+      mlo6iAvyUF3dQHJGDlXFxbjQMysunD59GCH00EsA0aGBw7bT2NiEAS8RMQnU19UQZjFQdbkN
+      nWIiK2s2JYXnEKZgMjNmoxvuUEIIGhqb0KkaUQlx1NfUEKx4cJmc1NS2kZwQSU1d6xjHAun0
+      WC0mOpsqaeuyExiZyMz4MC63ddPe3onmcdHW2Y3VGoAODxVVddRWVZAyJ4sgxUFDazdtnd3X
+      /CgdzQ39LUBTJc0OC+FmlZrLncTGp5A3L4XyyjqqKquYkzmPrs4OANpaWlCMZsxGPXUXq3D0
+      ddDmMjF79iyaaiq43NCAKcD3nxwRl0RHUy0NnS4Sw60oegMWk4nWmiq6HA5q2xzMSYrgcreH
+      3Lw8Ak06UtIyiA/QaHf5LPa6NNY3Ep06h/aGSjwOO2EzkklPtFFTd5ny2hay586is72DkS5B
+      hkTG0tt2mbq6ZpKTZwA6AgIsdLU00asEUFdRSkNDE1arZYSWoKuzv8VqaWnG3tVDQloGoWYX
+      tWVlaMGxGD1dNHc7R2yno70DAbQ0twCg6Ey0NTfS2lCDCAgZAwEIDa+q4lK9dDZUQ2A0sZEh
+      CAH9EwUKCgqq6sVh70HVoPxiLWmzUjDoFILDogmxGolNmU3DhZMEhcfxyYdCWHQ8OTk5hNtC
+      6OlswYWB0CALmhD09fRgtlgIj4rFatSjaBoer4fePgflJcXEpswmLNiKQGFGXCyKoiciUE9t
+      t0pEkMnn19IZrSjuLrw6K3oFmusqMdhmEBMRjCZgRlwcik6P5vWget141Y++6RAfaUKjvceJ
+      5uxDdTtxC9BUjZ7uXixWMzNmxKHz14yLYsCsU+n2gFUPztYaupQwEmIjQTESYlLp8OoJMg9v
+      8KmqKh6XHXRGhKahej302p2AgqL0T6AYTEbami+DMZDAkdhx9qDoLQihonpc2J3uK58nxoSS
+      f7GN+IjAMegCaSqVZWWkpGUSZTPTUVqONTwRm82GRdNj1ZvRCTN6h5nmHpXEGVFofXrqW3pJ
+      io/G8NHIQWfCYAogKT78GhPxcXH9lwREkpveQ3uvh2BrAAEmlcZOjfRZsXR1mAFIn5lEaWkF
+      8ampxEXbKK+qIjohiQBbAHp9/8+RkBBJW41ngKpqIC4uBiOheMw2vA4bEbYgysorCYpJJCgw
+      BINZQdGbSUuOoaSsipTkRCJ0JvTWOJQh/OpCCJJmpREZHkZ0WDDdPT3U11SQkJhEakw4Vkt/
+      cxITH4ceiIuLH3zhH0fRERcXS6AJulx6LDixhITTVVGKLiAcW4CJwKhg3A7bUCV8BXdfFxW1
+      l8iaNxdc3VRWVJCSOhNbcCA6gx5LdDymwDA0rRyHZsRqHJ4AnL0dVNW3kJ01B3dPGxXlNaTM
+      nEmgLQCz0YjVEkVgsxODTuH/A2xzvh0pVTcNAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Total Contributions by Month' width='192'>
+      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
+    </thumbnail>
+  </thumbnails>
+</workbook>
