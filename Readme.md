@@ -4,7 +4,7 @@
 
 *Evaluating the Effectiveness of SHIF/SHA using SQL Analysis*
 
-This project focuses on assessing the performance and impact of the Social Health Insurance Fund (SHIF) and Social Health Authority (SHA).  
+This project focused on assessing the performance and impact of the Social Health Insurance Fund (SHIF) and Social Health Authority (SHA).  
 Using a structured dataset, I applied SQL techniques to extract insights, evaluate system effectiveness, and highlight areas for improvement.
 
 ---
@@ -50,7 +50,7 @@ Using a structured dataset, I applied SQL techniques to extract insights, evalua
 
 ## My Contribution
 
-As part of my internship project, I:
+As part of my project, I:
 - Cleaned and analyzed the SHIF/SHA data using advanced *SQL queries*
 - Summarized patterns and performance metrics for different regions and providers
 - Built *interactive dashboards* in *Power BI, **Excel, and **Tableau* to visualize insights and KPIs
@@ -60,7 +60,7 @@ As part of my internship project, I:
 
 ## Dashboards & Visuals
 
-> Below are sample dashboards and visuals generated from the analysis
+> Below are sample dashboards and visuals generated from my analysis
 
 ### Tableau Dashboard member contribution and performance overview
 <img width="830" alt="Screenshot 2025-05-04 165242" src="https://github.com/user-attachments/assets/8d77a6c3-3373-4885-9078-956bf93f546c" />
